@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{whoo-hoo} !-f
+RewriteRule ^([^\.]+)$ $whoo-hoo.html [NC,L]
+
+RewriteEngine On
+RewriteCond %{shironeko-baka} !-f
+RewriteRule ^([^\.]+)$ $shironeko-baka.html [NC,L]
+
+RewriteEngine On
+RewriteCond %{pascal} !-f
+RewriteRule ^([^\.]+)$ $pascal.html [NC,L]

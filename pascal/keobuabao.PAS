@@ -5,7 +5,7 @@ var p_op, m_op, demthang, demhoa, demthua : integer;
 const neverstop = 1;
 
 begin
-    repeat
+    while True do
     begin
         try
         clrscr;
@@ -105,5 +105,4 @@ begin
         end;
         readln;
     end;
-    until neverstop <> 1;
 end.

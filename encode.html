@@ -15,7 +15,7 @@
 		var input = document.getElementById("inputbox").value;
 		var output = '';
 		for (var i = 0; i < input.length; i++) {
-			output = output + String.fromCharCode(input.charCodeAt(i)-1)
+			output = output + String.fromCharCode(input.charCodeAt(i)+1)
 		}
 		output = reverseString(output)
 		document.getElementById("outputbox").innerHTML = output;
@@ -24,7 +24,7 @@
 		var input = document.getElementById("inputbox").value;
 		var output = '';
 		for (var i = 0; i < input.length; i++) {
-			output = output + String.fromCharCode(input.charCodeAt(i)+1)
+			output = output + String.fromCharCode(input.charCodeAt(i)-1)
 		}
 		output = reverseString(output)
 		document.getElementById("outputbox").innerHTML = output;

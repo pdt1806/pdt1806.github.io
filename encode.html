@@ -4,8 +4,6 @@
 <title>encoder</title>
 </head>
 <script>
-	var stringAsHtml = $(selector).val().Replace("\r\n", "<br />\r\n");
-	function reverseString(str) {
 		let newString = '';
 		for (let i = str.length - 1; i >= 0; i--) {
 			newString += str[i];
@@ -16,19 +14,19 @@
 		var input = document.getElementById("inputbox").value;
 		var output = '';
 		for (var i = 0; i < input.length; i++) {
-			output = output + String.fromCharCode(input.charCodeAt(i)+1)
+			output = output + String.fromCharCode(input.charCodeAt(i)-1)
 		}
 		output = reverseString(output)
-		document.getElementById("outputline").innerHTML = output;
+		document.getElementById("outputbox").innerHTML = output;
 	}
 	function decodeFunc() {
 		var input = document.getElementById("inputbox").value;
 		var output = '';
 		for (var i = 0; i < input.length; i++) {
-			output = output + String.fromCharCode(input.charCodeAt(i)-1)
+			output = output + String.fromCharCode(input.charCodeAt(i)+1)
 		}
 		output = reverseString(output)
-		document.getElementById("outputline").innerHTML = output;
+		document.getElementById("outputbox").innerHTML = output;
 	}
 </script>
 <h3>Input box</h3>
@@ -37,5 +35,5 @@
 <button onclick="encodeFunc()">Endode</button>
 <button onclick="decodeFunc()">Decode</button>
 </p>
-<h3>Output</h3>
-<p id="outputline"></p>
+<h3>Output box</h3>
+<textarea readonly id="outputbox" style="resize:none" rows="20" cols="100"></textarea>

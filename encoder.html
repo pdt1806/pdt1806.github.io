@@ -1,12 +1,12 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
-<title>encoder</title>
+<title>pdtegman - en/decoder</title>
 </head>
 <script>
 	function reverseString(str) {
-		let newString = '';
-		for (let i = str.length - 1; i >= 0; i--) {
+		var newString = '';
+		for (var i = str.length - 1; i >= 0; i--) {
 			newString += str[i];
 		}
 		return newString;
@@ -18,7 +18,7 @@
 			output = output + String.fromCharCode(input.charCodeAt(i)+1)
 		}
 		output = reverseString(output)
-		document.getElementById("outputbox").innerHTML = output;
+		document.getElementById("outputbox").value = output;
 	}
 	function decodeFunc() {
 		var input = document.getElementById("inputbox").value;
@@ -27,14 +27,36 @@
 			output = output + String.fromCharCode(input.charCodeAt(i)-1)
 		}
 		output = reverseString(output)
-		document.getElementById("outputbox").innerHTML = output;
+		document.getElementById("outputbox").value = output;
+	}
+	function cls() {
+		document.getElementById("inputbox").value = '';
+	}
+	function copy() {
+		if (document.getElementById("outputbox").value != '') {
+		  var output = document.getElementById("outputbox");
+			output.select();
+			output.setSelectionRange(0, 99999);
+			document.execCommand("copy");
+			document.getElementById("copyAlert").innerHTML = '    Copied to clipboard!';
+			setTimeout(function(){
+			document.getElementById("copyAlert").innerHTML = '';
+			}, 3000);
+		} else {
+			document.getElementById("copyAlert").innerHTML = '    Nothing to copy.';
+			setTimeout(function(){
+			document.getElementById("copyAlert").innerHTML = '';
+			}, 3000);
+		}
 	}
 </script>
 <h3>Input box</h3>
+<p><button onclick="cls()">Clear</button></p>
 <textarea id="inputbox" style="resize:none" rows="20" cols="100"></textarea>
 <p>
 <button onclick="encodeFunc()">Endode</button>
 <button onclick="decodeFunc()">Decode</button>
 </p>
 <h3>Output box</h3>
+<p><button onclick="copy()">Copy</button><span id="copyAlert"></span></p>
 <textarea readonly id="outputbox" style="resize:none" rows="20" cols="100"></textarea>

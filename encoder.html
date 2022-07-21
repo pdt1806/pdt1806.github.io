@@ -61,7 +61,6 @@
 		font-weight: bold;
 	}
 	body {
-		color: white;
 		font-family: Quicksand;
 		background: url('img/encoder_bg.jpg');
 		background-repeat: no-repeat;
@@ -74,6 +73,7 @@
 		font-size: 20px;
 	}
 	textarea {
+		color: white;
 		background-color: #0a0f0f99;
 	}
 	button {
@@ -99,6 +99,6 @@
 <button onclick="decodeFunc()">Decode</button>
 </p>
 <h3>Output box</h3>
-<p><button onclick="copy()">Copy</button><span id="copyAlert"></span></p>
+<p><button onclick="copy()">Copy</button><span style="color: black" id="copyAlert"></span></p>
 <textarea readonly id="outputbox" style="resize:none" rows="20" cols="100"></textarea>
 <body>

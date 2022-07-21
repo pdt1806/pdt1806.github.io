@@ -50,6 +50,42 @@
 		}
 	}
 </script>
+<style>
+	@font-face {
+		font-family: Quicksand;
+		src: url(font/Quicksand-Regular.ttf);
+	}
+	@font-face {
+		font-family: Quicksand;
+		src: url(font/Quicksand-Bold.ttf);
+		font-weight: bold;
+	}
+	body {
+		color: white;
+		font-family: Quicksand;
+		background: url('img/encoder_bg.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	textarea {
+		background-color: #0a0f0f99;
+	}
+	button {
+		background-color: #00008b;
+		border: none;
+		border-radius: 12px;
+		color: white;
+		padding: 8px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 15px;
+		cursor: pointer;
+	}
+</style>
+<body>
 <h3>Input box</h3>
 <p><button onclick="cls()">Clear</button></p>
 <textarea id="inputbox" spellcheck="false" style="resize:none" rows="20" cols="100"></textarea>
@@ -60,3 +96,4 @@
 <h3>Output box</h3>
 <p><button onclick="copy()">Copy</button><span id="copyAlert"></span></p>
 <textarea readonly id="outputbox" style="resize:none" rows="20" cols="100"></textarea>
+<body>

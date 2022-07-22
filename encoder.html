@@ -55,29 +55,30 @@
 		font-family: Quicksand;
 		src: url(font/Quicksand-Bold.ttf);
 	}
-	body {
-		font-family: Quicksand;
+	.bg-image {
 		background: url('img/encoder_bg.jpg');
+		filter: blur(8px);
+  		-webkit-filter: blur(8px);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-attachment: fixed;
 		background-size: cover;
+	}
+	body {
+		font-family: Quicksand;
+		color: white;
 	}
 	h3 {
 		color: black;
 		font-size: 20px;
 	}
 	textarea {
-		font-family: Quicksand;
-		color: white;
 		background-color: #0a0f0f99;
 	}
 	button {
-		font-family: Quicksand;
 		background-color: #00008b;
 		border: none;
 		border-radius: 12px;
-		color: white;
 		padding: 8px;
 		text-align: center;
 		text-decoration: none;
@@ -86,6 +87,7 @@
 		cursor: pointer;
 	}
 </style>
+<div class="bg-image"></div>
 <body>
 <h3>Input box</h3>
 <p><button onclick="cls()">Clear</button></p>
@@ -97,4 +99,4 @@
 <h3>Output box</h3>
 <p><button onclick="copy()">Copy</button><span style="color: black" id="copyAlert"></span></p>
 <textarea readonly id="outputbox" style="resize:none" rows="20" cols="100"></textarea>
-<body>
+</body>

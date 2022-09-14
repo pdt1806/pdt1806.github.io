@@ -4,18 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/x-icon" href="img/icon/phatsua_avt_circle.png">
 <title>Phát sủa</title>
-<script>
-function playSound() {
-	var audio = document.getElementById("audio");
-	audio.currentTime = 0;
-	audio.play();
-}
-function playSound2() {
-	var audio = document.getElementById("audio2");
-	audio.currentTime = 0;
-	audio.play();
-}
-</script>
 <style>
 	@font-face {
 		font-family: Quicksand;
@@ -76,11 +64,9 @@ function playSound2() {
 <body>
 	<div class="center">
 		<img class="phatsua_avt" src="img/phatsua_avt.png" style="width:300px">
-		<audio id="audio" src="audio/phatsua.mp3"></audio>
-		<audio id="audio2" src="audio/phat_im-gay.mp3"></audio>
-		<button class="bphatsua bhover" onclick="playSound()">Nghe Phát sủa 🐶</button>
+		<button class="bphatsua bhover" onclick="parent.location('/rick.mp4')">Nghe Phát sủa 🐶</button>
 		<br>
-		<button class="bphatsua bhover" onclick="playSound2()">"I'm gay ~"</button>
+		<button class="bphatsua bhover" onclick="parent.location('/rick.mp4')">"I'm gay ~"</button>
 	</div>
 </body>
 </html>

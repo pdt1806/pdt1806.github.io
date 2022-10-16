@@ -15,6 +15,11 @@ function playSound2() {
 	audio.currentTime = 0;
 	audio.play();
 }
+function playSound3() {
+	var audio = document.getElementById("audio3");
+	audio.currentTime = 0;
+	audio.play();
+}
 </script>
 <style>
 	@font-face {
@@ -78,9 +83,12 @@ function playSound2() {
 		<img class="phatsua_avt" src="img/phatsua_avt.png" style="width:300px">
 		<audio id="audio" src="audio/phatsua.mp3"></audio>
 		<audio id="audio2" src="audio/phat_im-gay.mp3"></audio>
+		<audio id="audio3" src="audio/phatsua2.mp3"></audio>
 		<button class="bphatsua bhover" onclick="playSound()">Nghe Phát sủa 🐶</button>
 		<br>
 		<button class="bphatsua bhover" onclick="playSound2()">"I'm gay ~"</button>
+		<br>
+		<button class="bphatsua bhover" onclick="playSound3()">sủa lần 2</button>
 	</div>
 </body>
 </html>

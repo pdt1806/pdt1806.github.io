@@ -1,4 +1,4 @@
-var images = ['img/wallpaper.jpg', 'img/wallpaper2.jpg'];
+var bgm = ['img/wallpaper.jpg', 'img/wallpaper2.jpg'];
 $('body').css({
         'background' : 'url('+ bgm[Math.floor(Math.random() * bgm.length)] + ') no-repeat',
 });

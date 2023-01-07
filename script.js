@@ -1,10 +1,5 @@
-function pic() {
-	var bgm = ['img/wallpaper.jpg', 'img/wallpaper2.jpg'];
-	$('body').css({
-		'background' : 'url('+ bgm[Math.floor(Math.random() * bgm.length)] + ') no-repeat',
-	});
-}
-pic();
+var images = ['wallpaper.jpg', 'wallpaper2.jpg'];
+$('body').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
 
 function playSound() {
 	var audio = document.getElementById("audio");

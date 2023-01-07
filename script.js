@@ -1,5 +1,5 @@
-var images = ['wallpaper.jpg', 'wallpaper2.jpg'];
-document.getElementsByClassName('mainview')[0].style.backgroundImage = 'url('img/ + images[Math.floor(Math.random() * images.length)] + ')';
+var images = ['img/wallpaper.jpg', 'img/wallpaper2.jpg'];
+document.getElementsByClassName('mainview')[0].style.backgroundImage = 'url('images[Math.floor(Math.random() * images.length)] + ')';
 
 function playSound() {
 	var audio = document.getElementById("audio");

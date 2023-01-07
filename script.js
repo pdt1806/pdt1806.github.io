@@ -1,5 +1,5 @@
 var images = ['wallpaper.jpg', 'wallpaper2.jpg'];
-$('body').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+document.write("<style type='text/css'>body {background-image:url(some_file_path/mybg"+ images[Math.floor(Math.random() * images.length)] +");}</style>");
 
 function playSound() {
 	var audio = document.getElementById("audio");

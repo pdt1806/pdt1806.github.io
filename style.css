@@ -140,33 +140,3 @@ hr {
 		text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
 	}
 }
-.bphatsua {
-	font-family: Quicksand;
-	background-color: #FFA50099;
-	border: none;
-	border-radius: 12px;
-	color: white;
-	padding: 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 30px;
-	margin: 8px 2px;
-	cursor: pointer;
-}
-.bhover {
-	-moz-transition: all 0.1s ease-in;
-	-o-transition: all 0.1s ease-in;
-	-webkit-transition: all 0.2s ease-in;
-	transition: all 0.1s ease-in;
-}
-.bhover:hover {
-	transition: all 0.2s ease-in;
-	transform: scale(1.1);
-}
-.phatsua_avt {
-	display: block;
-	padding-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;
-}

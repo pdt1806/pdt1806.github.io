@@ -19,7 +19,8 @@ hr {
 	background-color: #0a0f0f99;
 	text-align: center;
 	position: absolute;
-	border-radius: 7%;
+	border-radius: 36px;
+	max-width: 300px;
 	padding: 40px;
 	left: 50%;
 	top: 50%;

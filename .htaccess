@@ -1,12 +1,7 @@
 RewriteEngine On
-RewriteCond %{pascal} !-f
-RewriteRule ^([^\.]+)$ $pascal.html [NC,L]
 
 RewriteCond %{phatsua} !-f
 RewriteRule ^([^\.]+)$ $phatsua.html [NC,L]
 
 RewriteCond %{encoder} !-f
 RewriteRule ^([^\.]+)$ $encoder.html [NC,L]
-
-RewriteCond %{ic3} !-f
-RewriteRule ^([^\.]+)$ $ic3.html [NC,L]

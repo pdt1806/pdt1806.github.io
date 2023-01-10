@@ -14,6 +14,9 @@ body {
 hr {
 	color: white
 }
+.avt {
+	width: 270px;
+}
 .center {
 	transform: translate(-50%, -50%);
 	background-color: #0a0f0f99;

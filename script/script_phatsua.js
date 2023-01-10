@@ -13,3 +13,8 @@ function playSound3() {
 	audio.currentTime = 0;
 	audio.play();
 }
+function playSound4() {
+	var audio = document.getElementById("audio4");
+	audio.currentTime = 0;
+	audio.play();
+}

@@ -102,24 +102,19 @@ hr {
 	background-color: transparent;
 	border: 5px solid white;
 }
-.avt {
+.icon {
 	-moz-transition: all 0.1s ease-in;
 	-o-transition: all 0.1s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 	transition: all 0.1s ease-in;
-	padding-bottom: 0.5em;
-}
-.smicon {
-	-moz-transition: all 0.1s ease-in;
-	-o-transition: all 0.1s ease-in;
-	-webkit-transition: all 0.2s ease-in;
-	transition: all 0.1s ease-in;
+	width: 40px;
+	vertical-align: middle;
 	padding-left: 0.5em; 
 	padding-right: 0.5em; 
 	padding-top: 0.5em; 
 	padding-bottom: 0.5em; 
 }
-.smicon:hover {
+.icon:hover {
 	-moz-transition: all 0.1s ease-in;
 	-o-transition: all 0.1s ease-in;
 	-webkit-transition: all 0.1s ease-in;

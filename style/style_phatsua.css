@@ -1,12 +1,12 @@
 @font-face {
 	font-family: Quicksand;
-	src: url(font/Quicksand-Bold.ttf);
+	src: url(/font/Quicksand-Bold.ttf);
 }
 body {
 	text-align: center;
 	font-family: Quicksand;
 	color: white;
-  background-image: url(img/phatsua_bg.jpg);
+  background-image: url(/img/phatsua_bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;

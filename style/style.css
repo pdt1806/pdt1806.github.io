@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Quicksand;
-	src: url(font/Quicksand-Bold.ttf);
+	src: url(/font/Quicksand-Bold.ttf);
 }
 body {
 	text-align: center;

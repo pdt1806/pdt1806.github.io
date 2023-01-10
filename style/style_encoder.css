@@ -1,9 +1,9 @@
 @font-face {
 		font-family: Quicksand;
-		src: url(font/Quicksand-Bold.ttf);
+		src: url(/font/Quicksand-Bold.ttf);
 	}
 	body {
-		background: url('img/encoder_bg.jpg');
+		background: url('/img/encoder_bg.jpg');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-attachment: fixed;

@@ -19,11 +19,25 @@ textarea {
 	color: white;
 	background-color: #0a0f0f99;
 	border-radius: 12px;
+	resize: none;
 }
-button {
+button.a {
 	font-family: Quicksand;
 	color: white;
 	background-color: #00008b;
+	border: none;
+	border-radius: 12px;
+	padding: 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	cursor: pointer;
+}
+button.b {
+	font-family: Quicksand;
+	color: white;
+	background-color: #228b22;
 	border: none;
 	border-radius: 12px;
 	padding: 8px;

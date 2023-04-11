@@ -1,19 +1,25 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png">
-<title>pdteggman - en/decoder</title>
+<title>pdteggman - En/Decoder</title>
 </head>
 <script type="text/javascript" src="script/script_encoder.js"></script>
 <link rel="stylesheet" type="text/css" href="style/style_encoder.css">
 <body>
+<div>
+<div style="display: inline-block;">
 <h3>Input box</h3>
-<p><button onclick="cls()">Clear</button></p>
-<textarea id="inputbox" spellcheck="false" style="resize:none" rows="20" cols="100"></textarea>
 <p>
-<button onclick="encodeFunc()">Encode</button>
-<button onclick="decodeFunc()">Decode</button>
+<button class="a" onclick="cls()">Clear</button>
+<button class="b" onclick="encodeFunc()">Encode</button>
+<button class="b" onclick="decodeFunc()">Decode</button>
 </p>
+<textarea id="inputbox" spellcheck="false" rows="20" cols="80"></textarea>
+</div>
+<div style="display: inline-block;">
 <h3>Output box</h3>
-<p><button onclick="copy()">Copy</button><span style="color: black; font-family: Quicksand" id="copyAlert"></span></p>
-<textarea readonly id="outputbox" style="resize:none" rows="20" cols="100"></textarea>
+<p><button class="a" onclick="copy()">Copy</button><span style="color: black; font-family: Quicksand" id="copyAlert"></span></p>
+<textarea readonly id="outputbox" rows="20" cols="80"></textarea>
+</div>
+</div>
 </body>

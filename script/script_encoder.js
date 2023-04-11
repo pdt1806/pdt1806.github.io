@@ -25,6 +25,7 @@ function decodeFunc() {
 }
 function cls() {
 	document.getElementById("inputbox").value = '';
+	document.getElementById("outputbox").value = '';
 }
 function copy() {
 	if (document.getElementById("outputbox").value != '') {

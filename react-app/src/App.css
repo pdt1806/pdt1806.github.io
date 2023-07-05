@@ -1,4 +1,8 @@
-.max-width-container {
-    max-width: 800px;
+.navbar-background {
+    background-color: #007bbf;
 }
-  
+
+.highlight {
+    color: #007bbf;
+    font-weight: 700;
+}

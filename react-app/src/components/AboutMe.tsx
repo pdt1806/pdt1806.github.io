@@ -6,10 +6,10 @@ function AboutMe() {
   return (
     <div className="d-flex p-2 w-75 mx-auto justify-content-center mt-5 align-items-center">
       <div>
-        <h1 className="mb-3">This is Benny Nguyen!</h1>
+        <h1 className="mb-3 highlight">This is Benny Nguyen!</h1>
         <p>
           An ordinary high school student who loves computers, soccer,{" "}
-          <strong>Anime and Japanese music.</strong>
+          <span className="highlight">Anime and Japanese music.</span>
         </p>
         <p>
           I am strong at Front-end development with a significant amount of

@@ -1,7 +1,0 @@
-RewriteEngine On
-
-RewriteCond %{phatsua} !-f
-RewriteRule ^([^\.]+)$ $phatsua.html [NC,L]
-
-RewriteCond %{encoder} !-f
-RewriteRule ^([^\.]+)$ $encoder.html [NC,L]

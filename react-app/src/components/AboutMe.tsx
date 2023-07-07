@@ -1,30 +1,38 @@
 import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
+import MainPageComponent from "./MainPageComponent";
 
-function AboutMe() {
+export default function AboutMe() {
   return (
-    <div className="d-flex p-2 w-75 mx-auto justify-content-center mt-5 align-items-center">
-      <div>
-        <h1 className="mb-3 highlight">This is Benny Nguyen!</h1>
-        <p>
-          An ordinary high school student who loves computers, soccer,{" "}
-          <span className="highlight">Anime and Japanese music.</span>
-        </p>
-        <p>
-          I am strong at Front-end development with a significant amount of
-          knowledge of different tools and frameworks. I am also a fast learner
-          and can adapt to new environments quickly.
-        </p>
+    <MainPageComponent title="About me">
+      <div className="d-flex justify-content-between">
+        <Box title="Education">
+          <h6>11/2022 - 05/2026</h6>
+          <p>Antelope High School</p>
+        </Box>
+        <Box title="I can use">
+          <h6>11/2022 - 05/2026</h6>
+          <p>Antelope High School</p>
+        </Box>
+        <Box title="Certificates - Degrees">
+          <p>None</p>
+        </Box>
       </div>
-      <img
-        src="/me.jpg"
-        alt="Me"
-        className="img-fluid ms-5 me-5"
-        style={{ width: "500px" }}
-      />
-    </div>
+    </MainPageComponent>
   );
 }
 
-export default AboutMe;
+interface BoxProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+function Box(props: BoxProps) {
+  return (
+    <div className="m-5">
+      <h2 className="highlight mb-3">{props.title}</h2>
+      {props.children}
+    </div>
+  );
+}

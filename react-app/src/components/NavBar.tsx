@@ -2,9 +2,9 @@ import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
-const NavBar = () => {
+export default function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark navbar-background">
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-background fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand h1" href="#">
           Benny Nguyen
@@ -42,6 +42,4 @@ const NavBar = () => {
       </div>
     </nav>
   );
-};
-
-export default NavBar;
+}

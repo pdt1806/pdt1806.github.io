@@ -1,13 +1,13 @@
+import Introduction from "./components/Introduction";
 import AboutMe from "./components/AboutMe";
 import NavBar from "./components/NavBar";
 
-function App() {
-    return (
+export default function App() {
+  return (
     <>
-        <NavBar />
-        <AboutMe />
+      <NavBar />
+      <Introduction />
+      <AboutMe />
     </>
-    );
+  );
 }
-
-export default App;

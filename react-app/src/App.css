@@ -6,3 +6,19 @@
     color: #007bbf;
     font-weight: 700;
 }
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid rgba(119, 119, 119, 0.1);
+}
+
+.title {
+    font-size: 55px;
+}
+
+.section-title {
+    font-size: 45px;
+}
+  

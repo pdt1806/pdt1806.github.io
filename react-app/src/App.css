@@ -1,0 +1,40 @@
+.navbar-background {
+    background-color: #007bbf;
+}
+
+.highlight {
+    color: #007bbf;
+    font-weight: 700;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid rgba(119, 119, 119, 0.1);
+}
+
+.title {
+    font-size: 55px;
+}
+
+.section-title {
+    font-size: 45px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.tech-icon {
+    padding: 3px;
+    width: 40px;
+}
+
+.tech-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+  }
+  

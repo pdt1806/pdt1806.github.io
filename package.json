@@ -1,9 +1,20 @@
 {
+  "homepage": "http://pdt1806.github.io/",
   "dependencies": {
     "aos": "^2.3.4",
-    "bootstrap": "^5.3.0"
+    "bootstrap": "^5.3.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.4"
+    "@types/aos": "^3.0.4",
+    "gh-pages": "^5.0.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }
 }

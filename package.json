@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4"
   }
 }

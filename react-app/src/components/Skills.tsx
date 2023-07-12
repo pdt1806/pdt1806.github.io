@@ -1,14 +1,19 @@
 import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-
 import Box from "./Box";
 import MainPageComponent from "./MainPageComponent";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 export default function TechStack() {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   return (
-    <MainPageComponent title="Tech Stack">
-      <div className="d-flex justify-content-between w-75">
+    <MainPageComponent title="Skills">
+      <div data-aos="fade-down" className="d-flex justify-content-between w-75">
         <Box title="Languages">
           <div className="tech-icons-container">
             <img

@@ -1,6 +1,7 @@
 import Introduction from "./components/Introduction";
 import AboutMe from "./components/AboutMe";
 import NavBar from "./components/NavBar";
+import TechStack from "./components/TechStack";
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <NavBar />
       <Introduction />
       <AboutMe />
+      <TechStack />
     </>
   );
 }

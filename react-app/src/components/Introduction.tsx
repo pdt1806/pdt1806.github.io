@@ -5,6 +5,7 @@ import "../App.css";
 export default function Introduction() {
   return (
     <>
+      <div className="pt-3" />
       <div className="d-flex p-2 pb-5 pt-5 w-75 mx-auto justify-content-center mt-5 align-items-center">
         <div>
           <h1 className="mb-4 highlight title">This is Benny Nguyen</h1>

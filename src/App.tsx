@@ -11,11 +11,11 @@ import "aos/dist/aos.css";
 
 export default function App() {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, offset: 500 });
   }, []);
   return (
     <>
-      <NavBar />
+      <section id="navbar"><NavBar /></section>
       <section id="introduction"><Introduction /></section>
       <section id="aboutme"><AboutMe /></section>
       <section id="skills"><Skills /></section>

@@ -1,7 +1,6 @@
 import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-import Box from "./Box";
 import MainPageComponent from "./MainPageComponent";
 
 export default function ContactMe() {

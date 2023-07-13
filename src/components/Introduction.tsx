@@ -19,8 +19,11 @@ export default function Introduction() {
           <p>
             I am strong at
             <span className="highlight"> Front-end development</span> with a
-            significant amount of knowledge of different tools and frameworks. I
-            am also a fast learner and can adapt to new environments quickly.
+            significant amount of knowledge of different tools and frameworks. I can also create simple 2D games.
+          </p>
+          <p>
+            I believe I am a fast learner and can adapt to new environments
+            quickly.
           </p>
         </div>
         <img

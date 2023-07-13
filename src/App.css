@@ -1,5 +1,6 @@
 .navbar-background {
     background-color: #007bbf;
+    color: white
 }
 
 .highlight {
@@ -26,6 +27,11 @@ p {
     font-size: 18px;
 }
 
+.email {
+    color: #000000;
+    text-decoration: none;
+}
+
 .tech-icon {
     padding: 3px;
     width: 40px;
@@ -36,5 +42,5 @@ p {
     flex-wrap: wrap;
     width: 100%;
     overflow: hidden;
-  }
+}
   

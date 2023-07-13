@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark navbar-background fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand h1" href="#">
+        <a className="navbar-brand h1" href="#introduction">
           Benny Nguyen
         </a>
         <button
@@ -23,17 +23,17 @@ export default function NavBar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#aboutme">
                 About me
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Works
+              <a className="nav-link" href="#skills">
+                Skills
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#contactme">
                 Contact me
               </a>
             </li>

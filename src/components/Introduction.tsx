@@ -27,7 +27,7 @@ export default function Introduction() {
           </p>
         </div>
         <img
-          src="/me.jpg"
+          src="/images/me.jpg"
           alt="Me"
           className="img-fluid ms-5 me-5"
           style={{ width: "500px" }}

@@ -7,7 +7,7 @@ export default function ContactMe() {
   return (
     <MainPageComponent title="Contact me">
       <div
-        data-aos="fade-down"
+        data-aos="fade-right"
         className="d-flex justify-content-between align-items-center w-50 pt-3 pb-3"
       >
         <div>

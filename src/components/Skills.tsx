@@ -8,7 +8,7 @@ import MainPageComponent from "./MainPageComponent";
 export default function Skills() {
   return (
     <MainPageComponent title="Skills">
-      <div data-aos="fade-down" className="d-flex justify-content-between align-items-center w-75">
+      <div data-aos="fade-left" className="d-flex justify-content-between align-items-center w-75">
         <Box title="Languages">
           <div className="tech-icons-container">
             <img

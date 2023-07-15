@@ -1,9 +1,8 @@
-import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
 import "../App.css";
-import Box from "./Box";
+import Box from "./Box/Box";
 import MainPageComponent from "./MainPageComponent";
-
 
 export default function AboutMe() {
   return (

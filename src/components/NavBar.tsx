@@ -1,5 +1,5 @@
-import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
 import "../App.css";
 
 export default function NavBar() {
@@ -30,6 +30,11 @@ export default function NavBar() {
             <li className="nav-item">
               <a className="nav-link" href="#skills">
                 Skills
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#works">
+                Works
               </a>
             </li>
             <li className="nav-item">

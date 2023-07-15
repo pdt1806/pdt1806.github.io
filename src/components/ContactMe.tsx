@@ -1,5 +1,5 @@
-import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
 import "../App.css";
 import MainPageComponent from "./MainPageComponent";
 
@@ -12,7 +12,7 @@ export default function ContactMe() {
       >
         <div>
           <h5>Email</h5>
-          <a href="mailto:nmphuc1806@gmail.com" className="email">
+          <a href="mailto:nmphuc1806@gmail.com" className="email anchor">
             <p>nmphuc1806@gmail.com</p>
           </a>
           <h5>Mobile phone</h5>

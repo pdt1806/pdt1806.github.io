@@ -1,7 +1,5 @@
-import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../App.css";
-
+import "bootstrap/dist/js/bootstrap";
 interface BoxProps {
   title: string;
   children: React.ReactNode;

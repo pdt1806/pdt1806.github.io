@@ -1,24 +1,42 @@
-import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
 import "../App.css";
-import Box from "./Box";
+import Box from "./Box/Box";
 import MainPageComponent from "./MainPageComponent";
-
 
 export default function Skills() {
   return (
     <MainPageComponent title="Skills">
-      <div data-aos="fade-left" className="d-flex justify-content-between align-items-center w-75">
+      <div
+        data-aos="fade-left"
+        className="d-flex justify-content-between align-items-center w-75"
+      >
         <Box title="Languages">
           <div className="tech-icons-container">
             <img
               src="/icon/tech/python.svg"
               className="tech-icon"
-              alt="Python" title="Python"
+              alt="Python"
+              title="Python"
             />
-            <img src="/icon/tech/dart.svg" className="tech-icon" alt="Dart" title="Dart" />
-            <img src="/icon/tech/html5.svg" className="tech-icon" alt="HTML5" title="HTML5" />
-            <img src="/icon/tech/css3.svg" className="tech-icon" alt="CSS3" title="CSS3" />
+            <img
+              src="/icon/tech/dart.svg"
+              className="tech-icon"
+              alt="Dart"
+              title="Dart"
+            />
+            <img
+              src="/icon/tech/html5.svg"
+              className="tech-icon"
+              alt="HTML5"
+              title="HTML5"
+            />
+            <img
+              src="/icon/tech/css3.svg"
+              className="tech-icon"
+              alt="CSS3"
+              title="CSS3"
+            />
             <img
               src="/icon/tech/javascript.svg"
               className="tech-icon"
@@ -31,7 +49,12 @@ export default function Skills() {
               alt="TypeScript"
               title="TypeScript"
             />
-            <img src="/icon/tech/java.svg" className="tech-icon" alt="Java" title="Java" />
+            <img
+              src="/icon/tech/java.svg"
+              className="tech-icon"
+              alt="Java"
+              title="Java"
+            />
           </div>
         </Box>
         <Box title="Frameworks">
@@ -55,7 +78,12 @@ export default function Skills() {
           />
         </Box>
         <Box title="Libraries">
-          <img src="/icon/tech/react.svg" className="tech-icon" alt="React" title="React" />
+          <img
+            src="/icon/tech/react.svg"
+            className="tech-icon"
+            alt="React"
+            title="React"
+          />
         </Box>
         <Box title="Databases and Other">
           <img
@@ -64,15 +92,30 @@ export default function Skills() {
             alt="PocketBase"
             title="PocketBase"
           />
-          <img src="/icon/tech/vite.svg" className="tech-icon" alt="Vite" title="Vite" />
+          <img
+            src="/icon/tech/vite.svg"
+            className="tech-icon"
+            alt="Vite"
+            title="Vite"
+          />
           <img
             src="/icon/tech/nodejs.svg"
             className="tech-icon"
             alt="Node.js"
             title="Node.js"
           />
-          <img src="/icon/tech/gradle.svg" className="tech-icon" alt="Gradle" title="Gradle" />
-          <img src="/icon/tech/docker.svg" className="tech-icon" alt="Docker" title="Docker" />
+          <img
+            src="/icon/tech/gradle.svg"
+            className="tech-icon"
+            alt="Gradle"
+            title="Gradle"
+          />
+          <img
+            src="/icon/tech/docker.svg"
+            className="tech-icon"
+            alt="Docker"
+            title="Docker"
+          />
           <img
             src="/icon/tech/jenkins.svg"
             className="tech-icon"
@@ -91,7 +134,12 @@ export default function Skills() {
             alt="Adobe Photoshop"
             title="Adobe Photoshop"
           />
-          <img src="/icon/tech/figma.svg" className="tech-icon" alt="Figma" title="Figma" />
+          <img
+            src="/icon/tech/figma.svg"
+            className="tech-icon"
+            alt="Figma"
+            title="Figma"
+          />
         </Box>
       </div>
       <hr className="w-75 mx-auto" />

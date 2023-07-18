@@ -7,10 +7,7 @@ import MainPageComponent from "./MainPageComponent";
 export default function AboutMe() {
   return (
     <MainPageComponent title="About me">
-      <div
-        data-aos="fade-down"
-        className="d-flex justify-content-between align-items-center"
-      >
+      <div className="d-flex justify-content-between align-items-center">
         <Box title="Education">
           <h5>11/2022 - Now</h5>
           <p>Antelope High School</p>

@@ -5,7 +5,7 @@ import "../App.css";
 export default function NavBar() {
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark navbar-background">
-      <div className="container-fluid">
+      <div className="container-fluid d-flex align-items-baseline">
         <a className="navbar-brand h1" href="#introduction">
           Benny Nguyen
         </a>

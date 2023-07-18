@@ -56,3 +56,65 @@ p {
     width: 100%;
     overflow: hidden;
 }
+
+#worksbox img {
+    height: 300px;
+    width: auto;
+}
+
+@media only screen and (max-width: 1366px) {
+    #introduction img {
+        width: 300px;
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    #introduction {
+        display: flex;
+        flex-direction: column;
+    }
+    #works {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #worksbox img {
+        height: 250px;
+        width: auto;
+    }
+    #contactme {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #contactme div {
+        margin-bottom: 10px;
+    }
+    #skills {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .section-title {
+        font-size: 40px;
+    }
+    #worksbox img {
+        height: 200px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    #worksbox img {
+        height: 150px;
+        width: auto;
+    }
+}
+
+
+

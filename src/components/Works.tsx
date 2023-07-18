@@ -9,7 +9,7 @@ export default function Works() {
     <MainPageComponent title="Works">
       <div
         className="d-flex flex-wrap justify-content-center align-items-center"
-        style={{ maxWidth: "75%" }}
+        id="works"
       >
         <WorksBox
           title="Legacy personal website"
@@ -20,11 +20,10 @@ export default function Works() {
           erg={false}
         ></WorksBox>
         <WorksBox
-          data-aos="flip-left"
           title="Rock Paper Scissors"
           description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
           image="/images/works/ropas-title.png"
-          link="http://bennynguyen.us/erg-rock-paper-scissors"
+          link=""
           source="https://github.com/pdt1806/erg-rock-paper-scissors"
           erg={true}
         ></WorksBox>

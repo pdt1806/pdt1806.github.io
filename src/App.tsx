@@ -1,6 +1,3 @@
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import AboutMe from "./components/AboutMe";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
@@ -10,9 +7,6 @@ import Skills from "./components/Skills";
 import Works from "./components/Works";
 
 export default function App() {
-  useEffect(() => {
-    Aos.init({ duration: 1500, offset: 250 });
-  }, []);
   return (
     <>
       <section id="navbar">

@@ -16,13 +16,13 @@ export default function WorksBox(props: BoxProps) {
     <div
       className="d-flex flex-column mt-5 mb-5 align-items-center"
       style={{ width: "45%" }}
-      data-aos="flip-left"
+      id="worksbox"
     >
       <img
         src={props.image}
         alt={props.title}
         className="mb-3"
-        style={{ height: "300px", borderRadius: "10px" }}
+        style={{ borderRadius: "10px" }}
       />
       {props.erg ? (
         <img
@@ -34,12 +34,14 @@ export default function WorksBox(props: BoxProps) {
       ) : (
         <></>
       )}
-      <a href={props.link} target="_blank" className="anchor">
+      {props.link !== "" ? (
+        <a href={props.link} target="_blank" className="anchor">
+          <h3 className="highlight mb-3">{props.title}</h3>
+        </a>
+      ) : (
         <h3 className="highlight mb-3">{props.title}</h3>
-      </a>
-      <p className="text-center" style={{ width: "80%" }}>
-        {props.description}
-      </p>
+      )}
+      <p className="text-center">{props.description}</p>
       {props.source !== "" ? (
         <a href={props.source} target="_blank" className="anchor">
           Source code

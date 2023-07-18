@@ -6,7 +6,7 @@ export default function Introduction() {
   return (
     <>
       <div className="pt-3" />
-      <div className="d-flex p-2 pb-5 pt-5 w-75 mx-auto justify-content-center mt-5 align-items-center">
+      <div className="d-flex p-2 pb-5 pt-5 w-75 mx-auto justify-content-center mt-5 align-items-center" id="introduction">
         <div>
           <h1 className="mb-4 highlight title">This is Benny Nguyen</h1>
           <p>
@@ -21,7 +21,7 @@ export default function Introduction() {
             <span className="highlight"> Front-end development</span> with a
             significant amount of knowledge of different tools and frameworks. I can also create simple 2D games.
           </p>
-          <p>
+          <p className="mb-5">
             I believe I am a fast learner and can adapt to new environments
             quickly.
           </p>

@@ -8,54 +8,52 @@ export default function Skills() {
   return (
     <MainPageComponent title="Skills">
       <div
-        data-aos="fade-left"
-        className="d-flex justify-content-between align-items-center w-75"
+        className="d-flex justify-content-between align-items-center"
+        id="skills"
       >
         <Box title="Languages">
-          <div className="tech-icons-container">
-            <img
-              src="/icon/tech/python.svg"
-              className="tech-icon"
-              alt="Python"
-              title="Python"
-            />
-            <img
-              src="/icon/tech/dart.svg"
-              className="tech-icon"
-              alt="Dart"
-              title="Dart"
-            />
-            <img
-              src="/icon/tech/html5.svg"
-              className="tech-icon"
-              alt="HTML5"
-              title="HTML5"
-            />
-            <img
-              src="/icon/tech/css3.svg"
-              className="tech-icon"
-              alt="CSS3"
-              title="CSS3"
-            />
-            <img
-              src="/icon/tech/javascript.svg"
-              className="tech-icon"
-              alt="JavaScript"
-              title="JavaScript"
-            />
-            <img
-              src="/icon/tech/typescript.svg"
-              className="tech-icon"
-              alt="TypeScript"
-              title="TypeScript"
-            />
-            <img
-              src="/icon/tech/java.svg"
-              className="tech-icon"
-              alt="Java"
-              title="Java"
-            />
-          </div>
+          <img
+            src="/icon/tech/python.svg"
+            className="tech-icon"
+            alt="Python"
+            title="Python"
+          />
+          <img
+            src="/icon/tech/dart.svg"
+            className="tech-icon"
+            alt="Dart"
+            title="Dart"
+          />
+          <img
+            src="/icon/tech/html5.svg"
+            className="tech-icon"
+            alt="HTML5"
+            title="HTML5"
+          />
+          <img
+            src="/icon/tech/css3.svg"
+            className="tech-icon"
+            alt="CSS3"
+            title="CSS3"
+          />
+          <img
+            src="/icon/tech/javascript.svg"
+            className="tech-icon"
+            alt="JavaScript"
+            title="JavaScript"
+          />
+          <img
+            src="/icon/tech/typescript.svg"
+            className="tech-icon"
+            alt="TypeScript"
+            title="TypeScript"
+          />
+          <img
+            src="/icon/tech/java.svg"
+            className="tech-icon"
+            alt="Java"
+            title="Java"
+          />
         </Box>
         <Box title="Frameworks">
           <img
@@ -75,6 +73,18 @@ export default function Skills() {
             className="tech-icon"
             alt="Phaser"
             title="Phaser"
+          />
+          <img
+            src="/icon/tech/socket-io.svg"
+            className="tech-icon"
+            alt="Socket.IO"
+            title="Socket.IO"
+          />
+          <img
+            src="/icon/tech/express-js.svg"
+            className="tech-icon"
+            alt="Express.js"
+            title="Express.js"
           />
         </Box>
         <Box title="Libraries">

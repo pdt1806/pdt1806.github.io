@@ -516,14 +516,6 @@
     "object-assign" "^4.1.1"
     "react-is" "^16.13.1"
 
-"react-animate-on-scroll@^2.1.7":
-  "integrity" "sha512-A4MsApouThr2YhguCQ0fq/HVOLtDMuBM1XCHxhYug8k2NfP0S4S6B7qhrVjylMCX4zFAnTa+YKz7eQG/StizFw=="
-  "resolved" "https://registry.npmjs.org/react-animate-on-scroll/-/react-animate-on-scroll-2.1.7.tgz"
-  "version" "2.1.7"
-  dependencies:
-    "lodash.throttle" "^4.1.1"
-    "prop-types" "^15.5.9"
-
 "react-dom@^18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"

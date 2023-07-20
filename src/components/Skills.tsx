@@ -1,3 +1,4 @@
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import "../App.css";
@@ -10,6 +11,7 @@ export default function Skills() {
       <div
         className="d-flex justify-content-between align-items-center"
         id="skills"
+        data-aos="fade-down"
       >
         <Box title="Languages">
           <img

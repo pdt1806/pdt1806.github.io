@@ -1,3 +1,4 @@
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import "../App.css";
@@ -7,7 +8,10 @@ import MainPageComponent from "./MainPageComponent";
 export default function AboutMe() {
   return (
     <MainPageComponent title="About me">
-      <div className="d-flex justify-content-between align-items-center">
+      <div
+        className="d-flex justify-content-between align-items-center"
+        data-aos="fade-down"
+      >
         <Box title="Education">
           <h5>11/2022 - Now</h5>
           <p>Antelope High School</p>

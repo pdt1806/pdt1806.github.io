@@ -62,13 +62,10 @@ p {
     width: auto;
 }
 
-@media only screen and (max-width: 1366px) {
-    #introduction img {
-        width: 300px;
-        height: auto;
-    }
+#footer {
+    padding-left: 10px;
+    padding-right: 10px;
 }
-
 
 @media only screen and (max-width: 1200px) {
     #introduction {

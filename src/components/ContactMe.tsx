@@ -1,3 +1,4 @@
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import "../App.css";
@@ -9,6 +10,8 @@ export default function ContactMe() {
       <div
         className="d-flex justify-content-evenly w-100 align-items-center pt-3 pb-3"
         id="contactme"
+        data-aos="fade-down"
+        data-aos-offset="50"
       >
         <div>
           <h5>Email</h5>

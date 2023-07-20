@@ -1,3 +1,4 @@
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import "../App.css";
@@ -10,6 +11,7 @@ export default function Works() {
       <div
         className="d-flex flex-wrap justify-content-center align-items-center"
         id="works"
+        data-aos="fade-down"
       >
         <WorksBox
           title="Legacy personal website"

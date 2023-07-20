@@ -1,3 +1,5 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import AboutMe from "./components/AboutMe";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
@@ -7,6 +9,15 @@ import Skills from "./components/Skills";
 import Works from "./components/Works";
 
 export default function App() {
+  AOS.init({
+    duration: 1000,
+    offset: 300,
+  });
+  {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 500);
+  }
   return (
     <>
       <section id="navbar">

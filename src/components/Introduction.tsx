@@ -23,6 +23,7 @@ export default function Introduction() {
             data-aos-duration="1000"
             data-aos="fade-down"
             data-aos-delay="500"
+            data-aos-offset="0"
           >
             <p>
               An ordinary high school student who loves

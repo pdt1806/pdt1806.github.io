@@ -17,6 +17,7 @@ export default function WorksBox(props: BoxProps) {
       className="d-flex flex-column mt-5 mb-5 align-items-center"
       style={{ width: "45%" }}
       id="worksbox"
+      data-aos="zoom-out"
     >
       <img
         src={props.image}

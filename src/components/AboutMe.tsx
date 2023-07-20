@@ -10,7 +10,7 @@ export default function AboutMe() {
     <MainPageComponent title="About me">
       <div
         className="d-flex justify-content-between align-items-center"
-        data-aos="fade-down"
+        data-aos="fade-right"
       >
         <Box title="Education">
           <h5>11/2022 - Now</h5>

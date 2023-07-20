@@ -11,7 +11,6 @@ export default function Works() {
       <div
         className="d-flex flex-wrap justify-content-center align-items-center"
         id="works"
-        data-aos="fade-down"
       >
         <WorksBox
           title="Legacy personal website"

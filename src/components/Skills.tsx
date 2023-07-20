@@ -1,11 +1,29 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
+import { useEffect, useState } from "react";
 import "../App.css";
 import Box from "./Box/Box";
 import MainPageComponent from "./MainPageComponent";
 
 export default function Skills() {
+  const [exceedsPoint, setExceedsPoint] = useState(false);
+
+  const checkScreenWidth = () => {
+    const screenWidth = window.innerWidth;
+    const breakpoint = 1200;
+
+    setExceedsPoint(screenWidth > breakpoint);
+  };
+
+  useEffect(() => {
+    checkScreenWidth();
+    window.addEventListener("resize", checkScreenWidth);
+    return () => {
+      window.removeEventListener("resize", checkScreenWidth);
+    };
+  }, []);
+
   return (
     <MainPageComponent title="Skills">
       <div
@@ -58,7 +76,7 @@ export default function Skills() {
             />
           </Box>
         </div>
-        <div data-aos="zoom-in" data-aos-delay="250">
+        <div data-aos="zoom-in" data-aos-delay={exceedsPoint ? "250" : "0"}>
           <Box title="Frameworks">
             <img
               src="/icon/tech/flutter.svg"
@@ -92,7 +110,7 @@ export default function Skills() {
             />
           </Box>
         </div>
-        <div data-aos="zoom-in" data-aos-delay="500">
+        <div data-aos="zoom-in" data-aos-delay={exceedsPoint ? "500" : "0"}>
           <Box title="Libraries">
             <img
               src="/icon/tech/react.svg"
@@ -102,8 +120,8 @@ export default function Skills() {
             />
           </Box>
         </div>
-        <div data-aos="zoom-in" data-aos-delay="750">
-          <Box title="Databases and Other">
+        <div data-aos="zoom-in" data-aos-delay={exceedsPoint ? "750" : "0"}>
+          <Box title="Databases and Others">
             <img
               src="/icon/tech/pocketbase.svg"
               className="tech-icon"

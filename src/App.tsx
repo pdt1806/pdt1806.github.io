@@ -28,9 +28,19 @@ export default function App() {
 
       function isElementInViewport(el: Element) {
         const rect = el.getBoundingClientRect();
+        if (el.id === "works" || el.id === "skills") {
+          return (
+            rect.top <=
+            (el.id === "skills"
+              ? document.documentElement.clientHeight / 2
+              : 300)
+          );
+        }
         return (
-          rect.top <= 300 ||
-          rect.bottom <=
+          (rect.top >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight)) ||
+          rect.top ==
             (window.innerHeight || document.documentElement.clientHeight)
         );
       }

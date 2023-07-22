@@ -8,7 +8,7 @@ export default function ContactMe() {
   return (
     <MainPageComponent title="Contact me">
       <div
-        className="d-flex justify-content-evenly w-100 align-items-center pt-3 pb-3"
+        className="d-flex justify-content-evenly w-100 align-items-center pt-3 pb-3 mt-3"
         id="contactme"
         data-aos="fade-up"
         data-aos-offset="50"

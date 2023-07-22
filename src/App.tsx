@@ -16,6 +16,43 @@ export default function App() {
   {
     setTimeout(() => {
       AOS.refresh();
+      let sections = document.querySelectorAll("section");
+      let navLinks = document.querySelectorAll(".navbar .nav-link");
+
+      function makeActive(link: Element | null) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        if (link) {
+          link.classList.add("active");
+        }
+      }
+
+      function isElementInViewport(el: Element) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top <= 300 ||
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      document.addEventListener("scroll", () => {
+        let activeLinkFound = false;
+
+        sections.forEach((section) => {
+          if (isElementInViewport(section)) {
+            let id = section.getAttribute("id");
+            let correspondingLink = document.querySelector(
+              `.navbar .nav-link[href="#${id}"]`
+            );
+            makeActive(correspondingLink);
+            activeLinkFound = true;
+          }
+        });
+
+        if (!activeLinkFound) {
+          makeActive(null);
+        }
+      });
     }, 500);
   }
   return (
@@ -23,19 +60,19 @@ export default function App() {
       <section id="navbar">
         <NavBar />
       </section>
-      <section id="introduction">
+      <section id="introduction" className="section">
         <Introduction />
       </section>
-      <section id="aboutme">
+      <section id="aboutme" className="section">
         <AboutMe />
       </section>
-      <section id="skills">
+      <section id="skills" className="section">
         <Skills />
       </section>
-      <section id="works">
+      <section id="works" className="section">
         <Works />
       </section>
-      <section id="contactme">
+      <section id="contactme" className="section">
         <ContactMe />
       </section>
       <Footer />

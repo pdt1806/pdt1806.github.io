@@ -159,6 +159,12 @@ export default function Skills() {
               title="Jenkins"
             />
             <img
+              src="/icon/tech/heroku.svg"
+              className="tech-icon"
+              alt="Heroku"
+              title="Heroku"
+            />
+            <img
               src="/icon/tech/vscode.svg"
               className="tech-icon"
               alt="Visual Studio Code"

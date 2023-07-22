@@ -3,14 +3,14 @@ body {
   overflow: auto;
 }
 
-.navbar-background {
-  background-color: #007bbf;
-  color: white;
-}
-
 .highlight {
   color: #007bbf;
   font-weight: 700;
+}
+
+.navbar-background {
+  background-color: #007bbf;
+  color: white;
 }
 
 hr {
@@ -64,6 +64,23 @@ p {
 #footer {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar .nav-item .nav-link {
+    padding: 5px 0;
+    position: relative;
+  }
+
+  .navbar .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease;
+    transform: scale(0);
+  }
 }
 
 @media only screen and (max-width: 1200px) {

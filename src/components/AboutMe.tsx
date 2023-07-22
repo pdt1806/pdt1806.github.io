@@ -14,7 +14,7 @@ export default function AboutMe() {
       >
         <Box title="Education">
           <h5>11/2022 - Now</h5>
-          <p>Antelope High School</p>
+          <p>Antelope High School, CA</p>
           <h5>09/2021 - 10/2022</h5>
           <p>Tran Quoc Toan 1 Middle School, Vietnam</p>
           <h5>08/2014 - 05/2021</h5>

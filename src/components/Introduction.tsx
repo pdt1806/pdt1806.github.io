@@ -16,6 +16,7 @@ export default function Introduction() {
             className="mb-4 highlight title"
             data-aos-duration="1000"
             data-aos="fade-down"
+            data-aos-offset="0"
           >
             This is Benny Nguyen
           </h1>

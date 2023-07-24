@@ -38,7 +38,7 @@ export default function Works() {
         ></WorksBox>
         <WorksBox
           title="Wordle"
-          description="A remake of the famous game Wordle using pure HTML5, CSS and JavaScript."
+          description="A remake of the popular game Wordle using pure HTML5, CSS and JavaScript."
           image="/images/works/wordle-icon.png"
           link="/erg-wordle"
           source="https://github.com/pdt1806/erg-wordle"

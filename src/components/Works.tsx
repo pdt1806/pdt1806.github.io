@@ -21,6 +21,14 @@ export default function Works() {
           erg={false}
         ></WorksBox>
         <WorksBox
+          title="AutoDisconnect"
+          description="A simple Minecraft mod that automatically disconnects players when they are in low health."
+          image="/images/works/autodisconnect-logo.png"
+          link="https://github.com/pdt1806/AutoDisconnect/releases/tag/v1.0.2"
+          source="https://github.com/pdt1806/AutoDisconnect"
+          erg={false}
+        ></WorksBox>
+        <WorksBox
           title="Rock Paper Scissors"
           description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
           image="/images/works/ropas-title.png"
@@ -29,12 +37,12 @@ export default function Works() {
           erg={true}
         ></WorksBox>
         <WorksBox
-          title="AutoDisconnect"
-          description="A simple Minecraft mod that automatically disconnects players when they are in low health."
-          image="/images/works/autodisconnect-logo.png"
-          link="https://github.com/pdt1806/AutoDisconnect/releases/tag/v1.0.2"
-          source="https://github.com/pdt1806/AutoDisconnect"
-          erg={false}
+          title="Wordle"
+          description="A remake of the famous game Wordle using pure HTML5, CSS and JavaScript."
+          image="/images/works/wordle-icon.png"
+          link="/erg-wordle"
+          source="https://github.com/pdt1806/erg-wordle"
+          erg={true}
         ></WorksBox>
       </div>
       <hr className="w-75 mx-auto" />

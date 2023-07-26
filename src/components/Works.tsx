@@ -17,7 +17,7 @@ export default function Works() {
           description="Legacy personal website written in pure HTML5, CSS, and JavaScript."
           image="/images/works/legacy-personal-website.png"
           link="http://legacy.bennynguyen.us"
-          source="https://github.com/pdt1806/pdt1806.github.io"
+          source="https://github.com/BNMP-Inc/legacy-personal-website"
           erg={false}
         ></WorksBox>
         <WorksBox

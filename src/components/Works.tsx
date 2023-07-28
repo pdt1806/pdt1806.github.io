@@ -44,6 +44,14 @@ export default function Works() {
           source="https://github.com/pdt1806/erg-wordle"
           erg={true}
         ></WorksBox>
+        <WorksBox
+          title="Pocket Hanzi Dictionary"
+          description="A simple extension that makes learning Chinese characters easier."
+          image="/images/works/pocket-hanzi-dictionary-icon.png"
+          link=""
+          source="https://github.com/pdt1806/pocket-hanzi-dictionary"
+          erg={false}
+        ></WorksBox>
       </div>
       <hr className="w-75 mx-auto" />
     </MainPageComponent>

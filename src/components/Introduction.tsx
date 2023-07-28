@@ -6,9 +6,8 @@ import "../App.css";
 export default function Introduction() {
   return (
     <>
-      <div className="pt-3" />
       <div
-        className="d-flex p-2 pb-5 pt-5 w-75 mx-auto justify-content-center mt-5 align-items-center"
+        className="d-flex p-2 mt-4 w-75 mx-auto justify-content-center align-items-center"
         id="introduction"
       >
         <div>
@@ -54,7 +53,6 @@ export default function Introduction() {
           data-aos="fade-down"
         />
       </div>
-      <div className="pb-5 mb-5" />
       <hr className="w-75 mx-auto" />
     </>
   );

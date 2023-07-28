@@ -83,10 +83,17 @@ p {
   }
 }
 
+@media only screen and (min-width: 1200px) and (min-height: 700px) {
+  #introduction {
+    height: 100vh;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   #introduction {
     display: flex;
     flex-direction: column;
+    padding-top: 5rem;
   }
   #works {
     display: flex;
@@ -110,10 +117,6 @@ p {
     flex-direction: column;
     text-align: center;
   }
-}
-
-#introduction {
-  height: 100vh;
 }
 
 @media only screen and (max-width: 470px) {

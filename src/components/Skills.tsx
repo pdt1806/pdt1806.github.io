@@ -118,6 +118,12 @@ export default function Skills() {
               alt="React"
               title="React"
             />
+            <img
+              src="/icon/tech/axios.svg"
+              className="tech-icon"
+              alt="Axios"
+              title="Axios"
+            />
           </Box>
         </div>
         <div data-aos="zoom-in" data-aos-delay={exceedsPoint ? "750" : "0"}>

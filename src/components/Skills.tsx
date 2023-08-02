@@ -147,6 +147,18 @@ export default function Skills() {
               title="Node.js"
             />
             <img
+              src="/icon/tech/arduino.svg"
+              className="tech-icon"
+              alt="Arduino"
+              title="Arduino"
+            />
+            <img
+              src="/icon/tech/raspberry-pi.svg"
+              className="tech-icon"
+              alt="Raspberry Pi"
+              title="Raspberry Pi"
+            />
+            <img
               src="/icon/tech/gradle.svg"
               className="tech-icon"
               alt="Gradle"
@@ -169,6 +181,12 @@ export default function Skills() {
               className="tech-icon"
               alt="Heroku"
               title="Heroku"
+            />
+            <img
+              src="/icon/tech/netlify.svg"
+              className="tech-icon"
+              alt="Netlify"
+              title="Netlify"
             />
             <img
               src="/icon/tech/vscode.svg"

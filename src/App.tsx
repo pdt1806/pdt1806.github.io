@@ -1,17 +1,20 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import AboutMe from "./components/AboutMe";
-import ContactMe from "./components/ContactMe";
-import Footer from "./components/Footer";
-import Introduction from "./components/Introduction";
-import NavBar from "./components/NavBar";
-import Skills from "./components/Skills";
-import Works from "./components/Works";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
+import "./App.css";
+import AboutMe from "./pages/AboutMe";
+import ContactMe from "./pages/ContactMe";
+import Education from "./pages/Education";
+import Introduction from "./pages/Introduction";
+import MyValues from "./pages/MyValues";
+import Skills from "./pages/Skills";
+import Works from "./pages/Works";
 
 export default function App() {
   AOS.init({
     duration: 1000,
-    offset: 300,
+    offset: 100,
   });
   {
     setTimeout(() => {
@@ -67,14 +70,17 @@ export default function App() {
   }
   return (
     <>
-      <section id="navbar">
+      {/* <section id="navbar">
         <NavBar />
-      </section>
+      </section> */}
       <section id="introduction" className="section">
         <Introduction />
       </section>
       <section id="aboutme" className="section">
         <AboutMe />
+      </section>
+      <section id="education" className="section">
+        <Education />
       </section>
       <section id="skills" className="section">
         <Skills />
@@ -82,10 +88,12 @@ export default function App() {
       <section id="works" className="section">
         <Works />
       </section>
+      <section id="my-values" className="section">
+        <MyValues />
+      </section>
       <section id="contactme" className="section">
         <ContactMe />
       </section>
-      <Footer />
     </>
   );
 }

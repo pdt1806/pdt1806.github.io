@@ -1,11 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap");
+
 body {
+  font-family: "Cabin", sans-serif !important;
   height: 100vh;
   overflow: auto;
 }
 
+.skills-box {
+  position: absolute;
+  right: 55vh;
+}
+
+p {
+  font-size: 30px !important;
+  margin: 0 !important;
+}
+
 .highlight {
-  color: #007bbf;
-  font-weight: 700;
+  color: #00f0ff;
+  font-weight: bold;
 }
 
 .navbar-background {
@@ -13,23 +26,87 @@ body {
   color: white;
 }
 
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 2px solid rgba(119, 119, 119, 0.1);
+.light-blue-box {
+  background-color: #2c9fc3;
+  width: 25vw;
+}
+
+section {
+  color: white;
+  background-color: #111111;
+  height: 100vh;
+}
+
+.this-is {
+  font-weight: 400;
+  font-size: 80px;
 }
 
 .title {
-  font-size: 55px;
+  font-size: 100px;
+}
+
+.introduction-img {
+  position: absolute;
+  left: calc(25vw - 450px / 2);
+}
+
+.introduction-info {
+  position: absolute;
+  right: 5vw;
+  width: 50vw;
+}
+
+.introduction-info p {
+  font-size: 30px;
 }
 
 .section-title {
-  font-size: 45px;
+  font-size: 80px;
+  font-weight: 700;
+  text-shadow: 0 0 80px #858585;
+  z-index: 1;
 }
 
-p {
-  font-size: 18px;
+.aboutme-img {
+  opacity: 0.2;
+  width: calc(100% / 3);
+  height: 100vh;
+  object-fit: cover;
+}
+
+.aboutme-text {
+  width: calc(80% / 3);
+  text-align: center;
+}
+
+.school-box {
+  border-radius: 12px;
+  border: 3px solid #00f0ff;
+  background: #003b48;
+  box-shadow: 0px 0px 60px 1px rgba(0, 240, 255, 0.25);
+  max-width: 40vw;
+  padding: 15px;
+}
+
+.background-component {
+  height: 100vh;
+  position: absolute;
+  filter: blur(0.5px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.works-container {
+  background: #00000075;
+  width: 100%;
+  padding: 20px;
+}
+
+.works-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .email {
@@ -46,7 +123,14 @@ p {
 
 .tech-icon {
   padding: 3px;
-  width: 40px;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.connections-icon {
+  margin: 4vh 1vw 0 1vw;
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .tech-icons-container {
@@ -61,9 +145,72 @@ p {
   width: auto;
 }
 
+#value-card {
+  width: 250px;
+  height: 300px;
+  margin: 5vh 7vw;
+  max-width: 15vw;
+  border-radius: 20px;
+}
+
+.red {
+  border: 1px solid #f00;
+  background: #210000;
+  box-shadow: 0px 4px 100px 0px rgba(255, 0, 0, 0.25);
+}
+
+.green {
+  border: 1px solid #00ff1a;
+  background: #002109;
+  box-shadow: 0px 4px 100px 0px rgba(36, 255, 0, 0.25);
+}
+
+.blue {
+  border: 1px solid #00f0ff;
+  background: #001f21;
+  box-shadow: 0px 4px 100px 0px rgba(0, 240, 255, 0.25);
+}
+
+.yellow {
+  border: 1px solid #fff500;
+  background: #211e00;
+  box-shadow: 0px 4px 100px 0px rgba(250, 255, 0, 0.25);
+}
+
 #footer {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+#text-input {
+  border-radius: 12px;
+  border: 3px solid #00f0ff;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  margin: 3vh 0 0 0;
+  width: 25vw;
+  text-align: start;
+}
+
+.non-message {
+  height: 7vh;
+}
+
+.message {
+  height: 20vh;
+}
+
+#submit-button {
+  width: 4vw;
+  padding: 5px;
+  border-radius: 50px;
+  background: #00f0ff;
+  margin-top: 2vh;
+  outline: none;
+  border: none;
 }
 
 @media only screen and (min-width: 992px) {

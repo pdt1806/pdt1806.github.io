@@ -13,28 +13,14 @@ interface BoxProps {
 
 export default function WorksBox(props: BoxProps) {
   return (
-    <div
-      className="d-flex align-items-center justify-content-center"
-      style={{ width: "65%" }}
-      id="worksbox"
-    >
+    <>
       <img
         src={props.image}
         alt={props.title}
         className="mb-3"
         style={{ borderRadius: "10px", marginRight: "50px" }}
       />
-      {/* {props.erg ? (
-        <img
-          src="/images/works/ERG-brand-black.png"
-          alt="Egg Recreates Games"
-          style={{ height: "40px" }}
-          className="mb-3"
-        />
-      ) : (
-        <></>
-      )} */}
-      <div>
+      <div style={{ width: "60%" }}>
         {props.link !== "" ? (
           <a href={props.link} target="_blank" className="anchor">
             <h3 className="works-title mb-3">{props.title}</h3>
@@ -56,6 +42,6 @@ export default function WorksBox(props: BoxProps) {
           <></>
         )}
       </div>
-    </div>
+    </>
   );
 }

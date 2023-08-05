@@ -100,13 +100,25 @@ section {
 .works-container {
   background: #00000075;
   width: 100%;
-  padding: 20px;
+  padding: 12vh 0 12vh 0;
 }
 
 .works-title {
   font-size: 50px;
   font-weight: 700;
   color: #fff;
+}
+
+.works-slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
+
+.slide-right {
+  transform: translateX(100%);
 }
 
 .email {
@@ -184,7 +196,7 @@ section {
 
 #text-input {
   border-radius: 12px;
-  border: 3px solid #00f0ff;
+  border: 2px solid #00f0ff;
   background-color: transparent;
   outline: none;
   color: white;
@@ -193,6 +205,11 @@ section {
   margin: 3vh 0 0 0;
   width: 25vw;
   text-align: start;
+  transition: border-color 0.2s ease-in-out;
+}
+
+#text-input:focus {
+  border: 2px solid #ffffff;
 }
 
 .non-message {

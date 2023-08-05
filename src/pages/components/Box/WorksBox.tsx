@@ -17,7 +17,6 @@ export default function WorksBox(props: BoxProps) {
       <img
         src={props.image}
         alt={props.title}
-        className="mb-3"
         style={{ borderRadius: "10px", marginRight: "50px" }}
       />
       <div style={{ width: "60%" }}>

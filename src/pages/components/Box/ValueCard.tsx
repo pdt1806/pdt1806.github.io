@@ -25,7 +25,6 @@ const ValueCard = (props: ValueCardProps) => {
     <div
       id="value-card"
       className={`d-flex flex-column align-items-center pt-5 pb-4 ${color}`}
-      style={{}}
       data-aos="flip-left"
       data-aos-offset="200"
     >

@@ -26,7 +26,6 @@ export function IntroductionInfo() {
         src="/images/me.jpg"
         alt="Me"
         className="img-fluid introduction-img"
-        style={{ width: "450px" }}
       />
       <div className="introduction-info">
         <div>

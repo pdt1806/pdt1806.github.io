@@ -22,7 +22,7 @@ const projects = [
     title="Rock Paper Scissors"
     description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
     image="/images/works/ropas-title.png"
-    link=""
+    link="http://ropas.bennynguyen.us"
     source="https://github.com/pdt1806/erg-rock-paper-scissors"
     erg={true}
   ></WorksBox>,
@@ -64,6 +64,7 @@ const WorksContainer = () => {
       {projects.map((project, i) => {
         return (
           <div
+            key={i}
             className="d-flex justify-content-center align-items-center w-75 h-100"
             id="worksbox"
             style={{
@@ -71,7 +72,9 @@ const WorksContainer = () => {
               left: "50%",
               transform: "translateX(-50%)",
               opacity: i === index ? 1 : 0,
-              transition: "opacity 0.3s ease-in-out",
+              visibility: i === index ? "visible" : "hidden",
+              pointerEvents: i === index ? "auto" : "none",
+              transition: "opacity 0.3s ease-in",
             }}
           >
             {project}

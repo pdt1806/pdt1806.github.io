@@ -37,6 +37,10 @@ section {
   height: 100vh;
 }
 
+#introduction {
+  height: 100vh;
+}
+
 .this-is {
   font-weight: 400;
   font-size: 80px;
@@ -48,6 +52,7 @@ section {
 
 .introduction-img {
   position: absolute;
+  width: 450px;
   left: calc(25vw - 450px / 2);
 }
 
@@ -158,8 +163,6 @@ section {
 }
 
 #value-card {
-  width: 250px;
-  height: 300px;
   margin: 5vh 7vw;
   max-width: 15vw;
   border-radius: 20px;
@@ -247,55 +250,41 @@ section {
   }
 }
 
-@media only screen and (min-width: 1200px) and (min-height: 700px) {
-  #introduction {
-    height: 100vh;
+@media only screen and (max-width: 1440px) {
+  .this-is {
+    font-size: 60px;
   }
-}
-
-@media only screen and (max-width: 1200px) {
-  #introduction {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5rem;
+  .title {
+    font-size: 80px;
   }
-  #works {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  p {
+    font-size: 25px !important;
   }
-  #worksbox img {
-    height: 250px;
-    width: auto;
+  .connections-icon {
+    width: 30px !important;
+    height: 30px !important;
   }
-  #contactme {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  #contactme div {
-    margin-bottom: 10px;
-  }
-  #skills {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 470px) {
   .section-title {
+    font-size: 70px;
+  }
+  .works-title {
     font-size: 40px;
   }
-  #worksbox img {
-    height: 200px;
-    width: auto;
+  .introduction-img {
+    position: absolute;
+    width: 400px;
+    left: calc(25vw - 400px / 2);
   }
 }
 
-@media only screen and (max-width: 380px) {
-  #worksbox img {
-    height: 150px;
-    width: auto;
+@media only screen and (max-width: 1366px) {
+  #value-card h2 {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .section-title {
+    font-size: 60px;
   }
 }

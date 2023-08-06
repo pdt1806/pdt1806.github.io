@@ -56,6 +56,53 @@ section {
   left: calc(25vw - 450px / 2);
 }
 
+@media only screen and (max-width: 1279px) {
+  body {
+    text-align: center !important;
+    align-items: center !important;
+  }
+  #introduction {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: max-content !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+  .introduction-img {
+    position: static !important;
+    width: 50% !important;
+    margin: 0 auto !important;
+  }
+  .introduction-info {
+    position: static !important;
+    margin-bottom: 20px !important;
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .introduction-info p {
+    font-size: 25px !important;
+  }
+  .this-is {
+    font-size: 60px !important;
+  }
+  .title {
+    font-size: 75px !important;
+  }
+  .introduction-img {
+    width: 75% !important;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .connections-icon {
+    margin: 4vh 2vw 0 2vw !important;
+  }
+}
+
 .introduction-info {
   position: absolute;
   right: 5vw;
@@ -78,6 +125,38 @@ section {
   width: calc(100% / 3);
   height: 100vh;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 1279px) {
+  .aboutme-img {
+    position: static !important;
+    width: 100% !important;
+    height: max-content !important;
+  }
+  #aboutme {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: max-content !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("/images/components/aboutme-bg-1.jpg") no-repeat center/cover !important;
+  }
+  .aboutme-text {
+    width: 80% !important;
+    margin-bottom: 50px !important;
+  }
+  p {
+    font-size: 25px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .section-title {
+    font-size: 55px !important;
+  }
 }
 
 .aboutme-text {
@@ -164,7 +243,8 @@ section {
 
 #value-card {
   margin: 5vh 7vw;
-  max-width: 15vw;
+  width: 13vw;
+  height: max-content;
   border-radius: 20px;
 }
 
@@ -251,6 +331,9 @@ section {
 }
 
 @media only screen and (max-width: 1440px) {
+  #value-card {
+    width: 16vw;
+  }
   .this-is {
     font-size: 60px;
   }
@@ -277,7 +360,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1600px) {
   #value-card h2 {
     font-size: 28px;
   }

@@ -10,6 +10,7 @@ export const LightBlueBox = (props: LightBlueBoxProps) => {
       style={{
         position: "absolute",
         ...(props.position === "right" ? { right: "0" } : { left: "0" }),
+        zIndex: 0,
       }}
     >
       {props.children}

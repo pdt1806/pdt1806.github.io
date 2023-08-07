@@ -1,32 +1,70 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
+import { useEffect, useState } from "react";
 import "../App.css";
 import Box from "./components/Box/Box";
 
 export default function Skills() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1280);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="vstack gap-3 d-flex justify-content-center h-100">
-      <img
-        src="/images/components/skills-bg-1.png"
-        className="background-component"
-        style={{ left: 0 }}
-      />
-      <img
-        src="/images/components/skills-bg-2.png"
-        className="background-component"
-        style={{ right: 0 }}
-      />
-      <h1 className="section-title ms-5">Skills</h1>
-      <SkillsInfo />
+    <div>
+      <div
+        className="vstack gap-3 d-flex justify-content-center"
+        style={{
+          height: !isMobile ? "100vh" : "",
+          width: isMobile ? "100%" : "",
+          flexDirection: isMobile ? "column" : "row",
+        }}
+      >
+        {!isMobile && (
+          <>
+            <img
+              src="/images/components/skills-bg-1.png"
+              className="background-component"
+              style={{ left: 0 }}
+            />
+            <img
+              src="/images/components/skills-bg-2.png"
+              className="background-component"
+              style={{ right: 0 }}
+            />
+          </>
+        )}
+        <h1
+          className="section-title"
+          style={{
+            marginLeft: !isMobile ? "5rem" : "auto",
+            marginRight: "auto",
+            marginBottom: isMobile ? "3rem" : "auto",
+            marginTop: isMobile ? "3rem" : "auto",
+          }}
+        >
+          Skills
+        </h1>
+        <SkillsInfo isMobile={isMobile} />
+      </div>
     </div>
   );
 }
 
-export function SkillsInfo() {
+export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
   return (
     <div className="skills-box">
-      <div style={{ transform: "translate(8vh)" }}>
+      <div style={{ transform: !isMobile ? "translate(8vh)" : "" }}>
         <div data-aos="fade-left">
           <Box title="Languages">
             <img
@@ -127,7 +165,7 @@ export function SkillsInfo() {
           />
         </Box>
       </div>
-      <div style={{ transform: "translate(8vh)" }}>
+      <div style={{ transform: !isMobile ? "translate(8vh)" : "" }}>
         <div data-aos="fade-left">
           <Box title="Databases and Others">
             <img

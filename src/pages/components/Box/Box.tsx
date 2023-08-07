@@ -23,14 +23,26 @@ export default function Box(props: BoxProps) {
     };
   }, []);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1280);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
       style={{
-        marginTop: isLargeScreen ? "4rem" : "3rem",
-        paddingTop: isLargeScreen ? "1rem" : "4rem",
-        marginBottom: isLargeScreen ? "4rem" : "3rem",
-        paddingBottom: isLargeScreen ? "1rem" : "4rem",
-        textAlign: "right",
+        marginTop: isLargeScreen ? "4rem" : !isMobile ? "3rem" : "2rem",
+        marginBottom: isLargeScreen ? "4rem" : !isMobile ? "3rem" : "2rem",
+        textAlign: isMobile ? "center" : "right",
       }}
     >
       <h2 style={{ marginBottom: "1.5rem", fontWeight: "bold" }}>

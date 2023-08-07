@@ -1,4 +1,5 @@
-import { useState } from "react";
+import "aos/dist/aos.css";
+import { useEffect, useState } from "react";
 import WorksBox from "./WorksBox";
 
 const projects = [
@@ -8,7 +9,6 @@ const projects = [
     image="/images/works/legacy-personal-website.png"
     link="http://legacy.bennynguyen.us"
     source="https://github.com/BNMP-Inc/legacy-personal-website"
-    erg={false}
   ></WorksBox>,
   <WorksBox
     title="AutoDisconnect"
@@ -16,7 +16,6 @@ const projects = [
     image="/images/works/autodisconnect-logo.png"
     link="https://github.com/pdt1806/AutoDisconnect/releases/tag/v1.0.2"
     source="https://github.com/pdt1806/AutoDisconnect"
-    erg={false}
   ></WorksBox>,
   <WorksBox
     title="Rock Paper Scissors"
@@ -24,7 +23,6 @@ const projects = [
     image="/images/works/ropas-title.png"
     link="http://ropas.bennynguyen.us"
     source="https://github.com/pdt1806/erg-rock-paper-scissors"
-    erg={true}
   ></WorksBox>,
   <WorksBox
     title="Wordle"
@@ -32,22 +30,34 @@ const projects = [
     image="/images/works/wordle-icon.png"
     link="/erg-wordle"
     source="https://github.com/pdt1806/erg-wordle"
-    erg={true}
   ></WorksBox>,
-  // <WorksBox
-  //   title="Pocket Hanzi Dictionary"
-  //   description="A simple extension that makes learning Chinese characters easier."
-  //   image="/images/works/pocket-hanzi-dictionary-icon.png"
-  //   link=""
-  //   source="https://github.com/pdt1806/pocket-hanzi-dictionary"
-  //   erg={false}
-  // ></WorksBox>,
+  <WorksBox
+    title="Pocket Hanzi Dictionary"
+    description="A simple extension that makes learning Chinese characters easier."
+    image="/images/works/pocket-hanzi-dictionary-icon.png"
+    link=""
+    source="https://github.com/pdt1806/pocket-hanzi-dictionary"
+  ></WorksBox>,
 ];
 
 const WorksContainer = () => {
   const [index, setIndex] = useState(0);
 
-  return (
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1280);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return !isMobile ? (
     <div
       className="works-container d-flex justify-content-between align-items-center w-100 h-50"
       style={{ zIndex: "2" }}
@@ -88,6 +98,21 @@ const WorksContainer = () => {
         style={{ height: "50px", width: "50px", filter: "invert(1)" }}
         onClick={() => setIndex((index + 1) % projects.length)}
       />
+    </div>
+  ) : (
+    <div>
+      {projects.map((project, i) => {
+        return (
+          <div
+            key={i}
+            className="d-flex justify-content-center align-items-center w-100 h-100"
+            id="worksbox"
+            data-aos="fade-down"
+          >
+            {project}
+          </div>
+        );
+      })}
     </div>
   );
 };

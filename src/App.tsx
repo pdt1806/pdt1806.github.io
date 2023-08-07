@@ -4,12 +4,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import "./App.css";
 import AboutMe from "./pages/AboutMe";
+import ContactMe from "./pages/ContactMe";
+import Education from "./pages/Education";
 import Introduction from "./pages/Introduction";
+import MyValues from "./pages/MyValues";
+import Skills from "./pages/Skills";
+import Works from "./pages/Works";
 
 export default function App() {
   AOS.init({
     duration: 1000,
-    offset: 200,
+    offset: 150,
   });
   {
     setTimeout(() => {
@@ -74,7 +79,7 @@ export default function App() {
       <section id="aboutme" className="section">
         <AboutMe />
       </section>
-      {/* <section id="education" className="section">
+      <section id="education" className="section">
         <Education />
       </section>
       <section id="skills" className="section">
@@ -88,7 +93,7 @@ export default function App() {
       </section>
       <section id="contactme" className="section">
         <ContactMe />
-      </section> */}
+      </section>
     </>
   );
 }

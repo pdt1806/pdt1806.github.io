@@ -45,7 +45,7 @@ export default function ContactMe() {
         <ContactMeInput isMobile={isMobile} />
         {!isMobile && (
           <LightBlueBox position="right">
-            <p style={{ fontWeight: "bold" }}>Connections</p>
+            <p style={{ fontWeight: "bold" }}>Social Links</p>
             <Connections />
           </LightBlueBox>
         )}
@@ -112,7 +112,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
               marginBottom: "3rem",
             }}
           >
-            <p style={{ fontWeight: "bold" }}>Connections</p>
+            <p style={{ fontWeight: "bold" }}>Social Links</p>
             <Connections />
           </div>
         )}

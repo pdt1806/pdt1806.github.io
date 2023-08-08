@@ -70,21 +70,21 @@ export function AboutMeInfo({ isMobile }: { isMobile: boolean }) {
       <AboutMeText>
         Was born and raised in{" "}
         <span style={{ fontWeight: "bold" }}>Vietnam</span> until the age of{" "}
-        <span style={{ fontWeight: "bold" }}>14</span>, I’ve been through many
-        obstacles to become who I am.
+        <span style={{ fontWeight: "bold" }}>14</span>, I’ve overcome numerous
+        obstacles to become who I am today.
       </AboutMeText>
       <AboutMeText>
         Living in{" "}
-        <span style={{ fontWeight: "bold" }}>2 different countries</span>,{" "}
-        <span style={{ fontWeight: "bold" }}>2 different cultures</span> has
-        made my perspective on this world{" "}
+        <span style={{ fontWeight: "bold" }}>2 different countries</span> with{" "}
+        <span style={{ fontWeight: "bold" }}>2 distinct cultures</span> has made
+        my perspective on this world{" "}
         <span style={{ fontWeight: "bold" }}>unique</span>.
       </AboutMeText>
       <AboutMeText>
-        Talking about my hobbies, I love{" "}
-        <span style={{ fontWeight: "bold" }}>programming</span>, that it
-        obvious. I also enjoy{" "}
-        <span style={{ fontWeight: "bold" }}>watching anime</span> and{" "}
+        Talking about my hobbies, it's clear that{" "}
+        <span style={{ fontWeight: "bold" }}>I really enjoy programming.</span>{" "}
+        I also like <span style={{ fontWeight: "bold" }}>watching anime</span>{" "}
+        and{" "}
         <span style={{ fontWeight: "bold" }}>listening to Japanese music</span>.
       </AboutMeText>
     </div>

@@ -188,6 +188,12 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
               title="Node.js"
             />
             <img
+              src="/icon/tech/nginx.svg"
+              className="tech-icon"
+              alt="NGINX"
+              title="NGINX"
+            />
+            <img
               src="/icon/tech/arduino.svg"
               className="tech-icon"
               alt="Arduino"
@@ -206,7 +212,7 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
               alt="Gradle"
               title="Gradle"
             />
-            <img
+            {/* <img
               src="/icon/tech/docker.svg"
               className="tech-icon"
               alt="Docker"
@@ -217,7 +223,7 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
               className="tech-icon"
               alt="Jenkins"
               title="Jenkins"
-            />
+            /> */}
             <img
               src="/icon/tech/heroku.svg"
               className="tech-icon"

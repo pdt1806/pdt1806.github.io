@@ -4,11 +4,18 @@ import WorksBox from "./WorksBox";
 
 const projects = [
   <WorksBox
-    title="Legacy personal website"
-    description="Legacy personal website written in pure HTML5, CSS, and JavaScript."
-    image="/images/works/legacy-personal-website.png"
-    link="https://legacy.bennynguyen.us"
-    source="https://github.com/BNMP-Inc/legacy-personal-website"
+    title="ERG Wordle"
+    description="A replica of the popular game Wordle using pure HTML5, CSS and JavaScript."
+    image="/images/works/wordle-icon.png"
+    link="https://wordle.bennynguyen.us"
+    source="https://github.com/pdt1806/erg-wordle"
+  ></WorksBox>,
+  <WorksBox
+    title="ERG Rock Paper Scissors"
+    description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
+    image="/images/works/ropas-title.png"
+    link="https://ropas.bennynguyen.us"
+    source="https://github.com/pdt1806/erg-rock-paper-scissors"
   ></WorksBox>,
   <WorksBox
     title="AutoDisconnect"
@@ -18,25 +25,18 @@ const projects = [
     source="https://github.com/pdt1806/AutoDisconnect"
   ></WorksBox>,
   <WorksBox
-    title="Rock Paper Scissors"
-    description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
-    image="/images/works/ropas-title.png"
-    link="https://ropas.bennynguyen.us"
-    source="https://github.com/pdt1806/erg-rock-paper-scissors"
-  ></WorksBox>,
-  <WorksBox
-    title="Wordle"
-    description="A remake of the popular game Wordle using pure HTML5, CSS and JavaScript."
-    image="/images/works/wordle-icon.png"
-    link="https://wordle.bennynguyen.us"
-    source="https://github.com/pdt1806/erg-wordle"
-  ></WorksBox>,
-  <WorksBox
     title="Pocket Hanzi Dictionary"
     description="A simple extension that makes learning Chinese characters easier."
     image="/images/works/pocket-hanzi-dictionary-icon.png"
     link="https://github.com/pdt1806/pocket-hanzi-dictionary/releases/"
     source="https://github.com/pdt1806/pocket-hanzi-dictionary"
+  ></WorksBox>,
+  <WorksBox
+    title="Legacy personal website"
+    description="Legacy personal website written in pure HTML5, CSS, and JavaScript."
+    image="/images/works/legacy-personal-website.png"
+    link="https://legacy.bennynguyen.us"
+    source="https://github.com/BNMP-Inc/legacy-personal-website"
   ></WorksBox>,
 ];
 

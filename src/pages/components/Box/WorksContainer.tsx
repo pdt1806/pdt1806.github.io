@@ -7,7 +7,7 @@ const projects = [
     title="Legacy personal website"
     description="Legacy personal website written in pure HTML5, CSS, and JavaScript."
     image="/images/works/legacy-personal-website.png"
-    link="http://legacy.bennynguyen.us"
+    link="https://legacy.bennynguyen.us"
     source="https://github.com/BNMP-Inc/legacy-personal-website"
   ></WorksBox>,
   <WorksBox
@@ -21,14 +21,14 @@ const projects = [
     title="Rock Paper Scissors"
     description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
     image="/images/works/ropas-title.png"
-    link="http://ropas.bennynguyen.us"
+    link="https://ropas.bennynguyen.us"
     source="https://github.com/pdt1806/erg-rock-paper-scissors"
   ></WorksBox>,
   <WorksBox
     title="Wordle"
     description="A remake of the popular game Wordle using pure HTML5, CSS and JavaScript."
     image="/images/works/wordle-icon.png"
-    link="/erg-wordle"
+    link="https://wordle.bennynguyen.us"
     source="https://github.com/pdt1806/erg-wordle"
   ></WorksBox>,
   <WorksBox

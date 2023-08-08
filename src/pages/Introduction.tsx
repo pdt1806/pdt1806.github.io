@@ -46,8 +46,7 @@ export function IntroductionInfo({ isMobile }: { isMobile: boolean }) {
           <div>
             <p>
               A <span style={{ fontWeight: "bold" }}>Front-end developer</span>{" "}
-              with a significant amount of knowledge of different tools and
-              frameworks.
+              who enjoys and wants to know more about programming.
             </p>
           </div>
         </div>

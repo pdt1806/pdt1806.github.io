@@ -379,6 +379,11 @@ section {
   border: none;
 }
 
+#contactme a {
+  color: white;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 992px) {
   .navbar .nav-item .nav-link {
     padding: 5px 0;

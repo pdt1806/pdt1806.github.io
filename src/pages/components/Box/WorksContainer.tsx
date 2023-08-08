@@ -14,7 +14,7 @@ const projects = [
     title="AutoDisconnect"
     description="A simple Minecraft mod that automatically disconnects players when they are in low health."
     image="/images/works/autodisconnect-logo.png"
-    link="https://github.com/pdt1806/AutoDisconnect/releases/tag/v1.0.2"
+    link="https://github.com/pdt1806/AutoDisconnect/releases/"
     source="https://github.com/pdt1806/AutoDisconnect"
   ></WorksBox>,
   <WorksBox
@@ -35,7 +35,7 @@ const projects = [
     title="Pocket Hanzi Dictionary"
     description="A simple extension that makes learning Chinese characters easier."
     image="/images/works/pocket-hanzi-dictionary-icon.png"
-    link=""
+    link="https://github.com/pdt1806/pocket-hanzi-dictionary/releases/"
     source="https://github.com/pdt1806/pocket-hanzi-dictionary"
   ></WorksBox>,
 ];

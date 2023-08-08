@@ -28,10 +28,9 @@ export default function WorksBox(props: BoxProps) {
 
   return (
     <div
-      className="d-flex"
+      className="d-flex justify-content-center align-items-center"
       style={{
         flexDirection: isMobile ? "column" : "row",
-        alignItems: "center",
       }}
     >
       <img

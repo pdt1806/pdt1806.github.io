@@ -99,7 +99,9 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
           }}
         >
           <p style={{ fontWeight: "bold" }}>Contact me</p>
-          <p>nmphuc1806@gmail.com</p>
+          <a href="mailto:contact@bennynguyen.us">
+            <p>contact@bennynguyen.us</p>
+          </a>
           <br />
           <p style={{ fontWeight: "bold" }}>Based in</p>
           <p>Antelope, California</p>

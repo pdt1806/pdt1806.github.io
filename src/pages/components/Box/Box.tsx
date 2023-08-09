@@ -8,11 +8,11 @@ interface BoxProps {
 }
 
 export default function Box(props: BoxProps) {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1366);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1536);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1366);
+      setIsLargeScreen(window.innerWidth > 1536);
     };
 
     window.addEventListener("resize", handleResize);
@@ -40,8 +40,8 @@ export default function Box(props: BoxProps) {
   return (
     <div
       style={{
-        marginTop: isLargeScreen ? "4rem" : !isMobile ? "3rem" : "2rem",
-        marginBottom: isLargeScreen ? "4rem" : !isMobile ? "3rem" : "2rem",
+        marginTop: isLargeScreen ? "4rem" : "2rem",
+        marginBottom: isLargeScreen ? "4rem" : "2rem",
         textAlign: isMobile ? "center" : "right",
       }}
     >

@@ -17,7 +17,6 @@ export default function Box(props: BoxProps) {
 
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };

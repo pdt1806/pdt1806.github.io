@@ -55,6 +55,13 @@ export default function ContactMe() {
 }
 
 export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
+  const [emailSent, setEmailSent] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setEmailSent(true);
+  };
+
   return (
     <div className="h-100 d-flex align-items-center">
       <div
@@ -69,6 +76,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
         <form
           className="d-flex flex-column"
           style={{ marginBottom: isMobile ? "3rem" : "0" }}
+          onSubmit={handleSubmit}
         >
           <input
             type="text"
@@ -90,7 +98,13 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             className="message"
             name="message"
           ></textarea>
-          <input type="submit" id="submit-button" value="Send"></input>
+          <div
+            className="d-flex align-items-center"
+            style={{ marginTop: "2vh" }}
+          >
+            <input type="submit" id="submit-button" value="Send"></input>
+            {emailSent && <h5>Email sent successfully!</h5>}
+          </div>
         </form>
         <div
           style={{

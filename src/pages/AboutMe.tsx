@@ -23,12 +23,13 @@ export default function AboutMe() {
   return (
     <>
       <h1
-        className="section-title mt-5"
+        className="section-title pt-5"
         style={{
-          position: isMobile ? "static" : "absolute",
-          left: isMobile ? "0" : "50%",
-          transform: isMobile ? "0" : "translateX(-50%)",
-          marginBottom: isMobile ? "30px" : "0",
+          position: !isMobile ? "absolute" : "static",
+          left: !isMobile ? "50%" : "auto",
+          right: !isMobile ? "" : "auto",
+          marginBottom: !isMobile ? "0" : "3rem",
+          transform: !isMobile ? "translateX(-50%)" : "none",
         }}
       >
         More about me

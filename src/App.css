@@ -3,12 +3,17 @@
 body {
   font-family: "Cabin", sans-serif !important;
   height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   background-color: #111111 !important;
 }
 
+h5 {
+  margin-bottom: 0 !important;
+}
+
 p {
-  font-size: 30px !important;
+  font-size: 30px;
   margin: 0 !important;
 }
 
@@ -292,6 +297,7 @@ section {
   width: 13vw;
   height: max-content;
   border-radius: 20px;
+  max-width: 250px;
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 420px) {
@@ -371,10 +377,10 @@ section {
   width: 4vw;
   min-width: 60px;
   padding: 5px;
+  margin: 0 10px 0 0;
   border-radius: 50px;
   background: #00f0ff;
   color: black;
-  margin-top: 2vh;
   outline: none;
   border: none;
 }

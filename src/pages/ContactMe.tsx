@@ -2,6 +2,7 @@ import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import "../App.css";
 import Connections from "./components/Box/Connections";
 import { LightBlueBox } from "./components/Box/LightBlueBox";
@@ -55,11 +56,79 @@ export default function ContactMe() {
 }
 
 export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
-  const [emailSent, setEmailSent] = useState(false);
+  function isEmptyOrSpaces(str: string) {
+    return str === null || str.match(/^ *$/) !== null;
+  }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  function afterSending() {
+    const inputs = document.querySelectorAll(
+      'input[name="email"], textarea[name="message"], input[name="full-name"]'
+    ) as NodeListOf<HTMLInputElement>;
+
+    inputs.forEach((input) => {
+      input.value = "";
+      input.setAttribute("disabled", "true");
+    });
+  }
+
+  const [emailSent, setEmailSent] = useState<string | null>(null);
+  const [isHuman, setIsHuman] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    const getValue = (name: string) =>
+      (document.getElementsByName(name)[0] as HTMLInputElement).value;
+
+    const fullName = getValue("full-name");
+    const email = getValue("email");
+    const message = getValue("message");
+
     e.preventDefault();
-    setEmailSent(true);
+    if (!isHuman) {
+      setEmailSent("Please verify that you are a human.");
+      return;
+    }
+    if (emailSent !== "Message sent successfully!") {
+      if (isEmptyOrSpaces(fullName)) {
+        setEmailSent("Please enter your full name.");
+        return;
+      }
+      if (isEmptyOrSpaces(email)) {
+        setEmailSent("Please enter your email.");
+        return;
+      }
+      if (
+        !email.match(
+          /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        )
+      ) {
+        setEmailSent("Please enter a valid email.");
+        return;
+      }
+      if (isEmptyOrSpaces(message)) {
+        setEmailSent("Please enter your message.");
+        return;
+      }
+      try {
+        const response = await fetch("https://webemail.bennynguyen.us/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName: fullName,
+            email: email,
+            message: message,
+          }),
+        });
+        response.status !== 200 || (await response.text()) !== "sent"
+          ? setEmailSent("An error occurred. Please try again later.")
+          : setEmailSent("Message sent successfully!");
+        afterSending();
+      } catch (error) {
+        setEmailSent("An error occurred. Please try again later.");
+        afterSending();
+      }
+    }
   };
 
   return (
@@ -98,12 +167,17 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             className="message"
             name="message"
           ></textarea>
+          <ReCAPTCHA
+            sitekey="6LfeLqMnAAAAAKNqeaU1rJCln6rgiwDNdoHDLX0s"
+            theme="dark"
+            onChange={() => setIsHuman(true)}
+          />
           <div
             className="d-flex align-items-center"
             style={{ marginTop: "2vh" }}
           >
             <input type="submit" id="submit-button" value="Send"></input>
-            {emailSent && <h5>Email sent successfully!</h5>}
+            {emailSent !== "" && <h5>{emailSent}</h5>}
           </div>
         </form>
         <div

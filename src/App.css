@@ -366,11 +366,14 @@ section {
 }
 
 .non-message {
-  height: 7vh;
+  height: 6vh;
+  min-height: 50px;
 }
 
 .message {
-  height: 20vh;
+  height: 16vh;
+  margin-bottom: 2vh !important;
+  overflow-y: auto;
 }
 
 #submit-button {
@@ -388,6 +391,18 @@ section {
 #contactme a {
   color: white;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+  h5 {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  h5 {
+    font-size: 13px !important;
+  }
 }
 
 @media only screen and (min-width: 992px) {

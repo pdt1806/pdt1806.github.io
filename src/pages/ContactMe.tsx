@@ -56,11 +56,11 @@ export default function ContactMe() {
 }
 
 export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
-  function isEmptyOrSpaces(str: string) {
+  const isEmptyOrSpaces = (str: string) => {
     return str === null || str.match(/^ *$/) !== null;
-  }
+  };
 
-  function afterSending() {
+  const afterSending = () => {
     const inputs = document.querySelectorAll(
       'input[name="email"], textarea[name="message"], input[name="full-name"]'
     ) as NodeListOf<HTMLInputElement>;
@@ -69,10 +69,14 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
       input.value = "";
       input.setAttribute("disabled", "true");
     });
-  }
+  };
 
   const [emailSent, setEmailSent] = useState<string | null>(null);
   const [isHuman, setIsHuman] = useState(false);
+
+  const captchaVerify = () => {
+    isHuman ? setIsHuman(false) : setIsHuman(true);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     const getValue = (name: string) =>
@@ -170,7 +174,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
           <ReCAPTCHA
             sitekey="6LfeLqMnAAAAAKNqeaU1rJCln6rgiwDNdoHDLX0s"
             theme="dark"
-            onChange={() => setIsHuman(true)}
+            onChange={captchaVerify}
           />
           <div
             className="d-flex align-items-center"

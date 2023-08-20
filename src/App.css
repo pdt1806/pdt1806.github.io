@@ -475,4 +475,18 @@ section {
   .section-title {
     font-size: 64px;
   }
+  .introduction-info p {
+    font-size: 28px;
+  }
+  .this-is {
+    font-size: 56px;
+  }
+  .title {
+    font-size: 72px;
+    margin-bottom: 2rem !important;
+  }
+  .introduction-img {
+    width: 400px !important;
+    left: calc(25vw - 400px / 2);
+  }
 }

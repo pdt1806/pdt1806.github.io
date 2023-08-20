@@ -40,7 +40,7 @@ export function IntroductionInfo({ isMobile }: { isMobile: boolean }) {
       <div className="introduction-info" style={{ zIndex: 2 }}>
         <div>
           <h2 className="this-is">This is</h2>
-          <h1 className="mb-5 highlight title" data-aos-duration="1000">
+          <h1 className="highlight title" data-aos-duration="1000">
             Benny Nguyen
           </h1>
           <div>

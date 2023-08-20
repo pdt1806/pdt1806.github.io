@@ -475,8 +475,8 @@ section {
   .section-title {
     font-size: 64px;
   }
-  .introduction-info p {
-    font-size: 28px;
+  p {
+    font-size: 28px !important;
   }
   .this-is {
     font-size: 56px;
@@ -488,5 +488,8 @@ section {
   .introduction-img {
     width: 400px !important;
     left: calc(25vw - 400px / 2);
+  }
+  .works-title {
+    font-size: 40px;
   }
 }

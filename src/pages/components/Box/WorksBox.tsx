@@ -38,7 +38,6 @@ export default function WorksBox(props: BoxProps) {
         alt={props.title}
         style={{
           borderRadius: "10px",
-          marginRight: !isMobile ? "50px" : "0px",
           width: !isMobile ? "auto" : "60%",
           maxWidth: isMobile ? "400px" : "none",
           marginBottom: !isMobile ? "0px" : "20px",

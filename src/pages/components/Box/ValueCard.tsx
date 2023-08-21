@@ -11,7 +11,7 @@ const ValueCard = (props: ValueCardProps) => {
     case "Determination":
       color = "red";
       break;
-    case "Thinking":
+    case "Thoughtful":
       color = "green";
       break;
     case "Collaborative":

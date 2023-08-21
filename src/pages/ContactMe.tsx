@@ -22,20 +22,28 @@ export default function ContactMe() {
     };
   }, []);
 
+  const [isSmall, setIsSmall] = useState(window.innerHeight < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmall(window.innerHeight < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div id="contact-me" className="vstack gap-3 h-100">
-        {/* <h1
-          className="section-title ms-5 mt-5 z-0"
-          style={{ position: "absolute" }}
-        >
-          Get in touch
-        </h1> */}
         <h1
           className="section-title z-0"
           style={{
             position: !isMobile ? "absolute" : "static",
-            marginTop: "5rem",
+            marginTop: isSmall ? "2rem" : "5rem",
             marginLeft: isMobile ? "auto" : "3rem",
             marginBottom: isMobile ? "3rem" : "none",
             marginRight: isMobile ? "auto" : "0",

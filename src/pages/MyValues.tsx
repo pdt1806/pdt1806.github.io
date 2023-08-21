@@ -54,7 +54,7 @@ export default function MyValues() {
             title="Determination"
             img="images/components/value-1.png"
           />
-          <ValueCard title="Thinking" img="images/components/value-2.png" />
+          <ValueCard title="Thoughtful" img="images/components/value-2.png" />
         </div>
         <div className="d-flex">
           <ValueCard

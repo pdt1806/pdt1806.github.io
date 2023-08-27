@@ -37,7 +37,7 @@ export default function WorksBox(props: BoxProps) {
         src={props.image}
         alt={props.title}
         style={{
-          borderRadius: "10px",
+          borderRadius: "20px",
           width: !isMobile ? "auto" : "60%",
           maxWidth: isMobile ? "400px" : "none",
           marginBottom: !isMobile ? "0px" : "20px",

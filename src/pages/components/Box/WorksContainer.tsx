@@ -107,7 +107,7 @@ const WorksContainer = () => {
             key={i}
             className="d-flex justify-content-center align-items-center w-100 h-100"
             id="worksbox"
-            data-aos="fade-down"
+            data-aos="zoom-in"
           >
             {project}
           </div>

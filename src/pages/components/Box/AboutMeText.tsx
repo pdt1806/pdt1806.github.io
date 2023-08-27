@@ -8,7 +8,7 @@ interface AboutMeTextProps {
 
 const AboutMeText = (props: AboutMeTextProps) => {
   return (
-    <p className="aboutme-text" data-aos="zoom-in">
+    <p className="aboutme-text" data-aos="zoom-out">
       {props.children}
     </p>
   );

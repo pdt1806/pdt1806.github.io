@@ -1,3 +1,4 @@
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import React, { useEffect, useState } from "react";
@@ -38,6 +39,7 @@ export default function Box(props: BoxProps) {
 
   return (
     <div
+      data-aos={isMobile ? "fade-down" : "fade-right"}
       style={{
         marginTop: isLargeScreen ? "4rem" : "2rem",
         marginBottom: isLargeScreen ? "4rem" : "2rem",

@@ -39,7 +39,7 @@ export default function Box(props: BoxProps) {
 
   return (
     <div
-      data-aos={isMobile ? "fade-down" : "fade-right"}
+      data-aos={isMobile ? "fade-down" : "fade-left"}
       style={{
         marginTop: isLargeScreen ? "4rem" : "2rem",
         marginBottom: isLargeScreen ? "4rem" : "2rem",

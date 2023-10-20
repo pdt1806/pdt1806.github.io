@@ -124,6 +124,12 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
           title="Bootstrap"
         />
         <img
+          src="/icon/tech/mantine.svg"
+          className="tech-icon"
+          alt="Mantine"
+          title="Mantine"
+        />
+        <img
           src="/icon/tech/phaser.svg"
           className="tech-icon"
           alt="Phaser"
@@ -178,6 +184,18 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
             className="tech-icon"
             alt="Node.js"
             title="Node.js"
+          />
+          <img
+            src="/icon/tech/npm.svg"
+            className="tech-icon"
+            alt="npm"
+            title="npm"
+          />
+          <img
+            src="/icon/tech/bun.svg"
+            className="tech-icon"
+            alt="bun"
+            title="bun"
           />
           <img
             src="/icon/tech/nginx.svg"

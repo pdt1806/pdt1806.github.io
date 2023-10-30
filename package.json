@@ -1,12 +1,19 @@
 {
   "name": "personal-website",
   "version": "2.1.0",
-  "homepage": "https://bennynguyen.us",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "postbuild": "react-snap",
     "serve": "vite preview"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    }
   },
   "dependencies": {
     "aos": "^2.3.4",

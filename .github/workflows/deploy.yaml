@@ -1,2 +1,16 @@
-- name: Server-side render (SSR) with react-snap
-  uses: brycedorn/react-snap-action@v1.0.2
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  prerender:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Server-side render
+        uses: brycedorn/react-snap-action@v1.0.2

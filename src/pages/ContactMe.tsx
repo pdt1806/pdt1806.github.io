@@ -73,6 +73,8 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
       'input[name="email"], textarea[name="message"], input[name="full-name"]'
     ) as NodeListOf<HTMLInputElement>;
 
+    document.getElementById("captcha")?.remove();
+
     inputs.forEach((input) => {
       input.value = "";
       input.setAttribute("disabled", "true");
@@ -183,6 +185,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             sitekey="6LfeLqMnAAAAAKNqeaU1rJCln6rgiwDNdoHDLX0s"
             theme="dark"
             onChange={captchaVerify}
+            id="captcha"
           />
           <div
             className="d-flex align-items-center"

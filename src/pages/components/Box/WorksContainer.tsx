@@ -4,18 +4,18 @@ import WorksBox from "./WorksBox";
 
 const projects = [
   <WorksBox
+    title="Discord Status as Image"
+    description="Turn your Discord status into a simple, eye-catching image for easy sharing and display."
+    image="/images/works/disi-logo.png"
+    link="https://disi.bennynguyen.us"
+    source="https://github.com/pdt1806/discord-status-as-image"
+  ></WorksBox>,
+  <WorksBox
     title="ERG Wordle"
     description="A replica of the popular game Wordle using pure HTML5, CSS and JavaScript."
     image="/images/works/wordle-icon.png"
     link="https://wordle.bennynguyen.us"
     source="https://github.com/pdt1806/erg-wordle"
-  ></WorksBox>,
-  <WorksBox
-    title="ERG Rock Paper Scissors"
-    description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
-    image="/images/works/ropas-title.png"
-    link="https://ropas.bennynguyen.us"
-    source="https://github.com/pdt1806/erg-rock-paper-scissors"
   ></WorksBox>,
   <WorksBox
     title="AutoDisconnect"
@@ -25,19 +25,26 @@ const projects = [
     source="https://github.com/pdt1806/AutoDisconnect"
   ></WorksBox>,
   <WorksBox
-    title="Pocket Hanzi Dictionary"
-    description="A simple extension that makes learning Chinese characters easier."
-    image="/images/works/pocket-hanzi-dictionary-icon.png"
-    link="https://github.com/pdt1806/pocket-hanzi-dictionary/releases/"
-    source="https://github.com/pdt1806/pocket-hanzi-dictionary"
+    title="ERG Rock Paper Scissors"
+    description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
+    image="/images/works/ropas-title.png"
+    link="https://ropas.bennynguyen.us"
+    source="https://github.com/pdt1806/erg-rock-paper-scissors"
   ></WorksBox>,
-  <WorksBox
-    title="Legacy personal website"
-    description="Legacy personal website written in pure HTML5, CSS, and JavaScript."
-    image="/images/works/legacy-personal-website.png"
-    link="https://legacy.bennynguyen.us"
-    source="https://github.com/BNMP-Inc/legacy-personal-website"
-  ></WorksBox>,
+  // <WorksBox
+  //   title="Pocket Hanzi Dictionary"
+  //   description="A simple extension that makes learning Chinese characters easier."
+  //   image="/images/works/pocket-hanzi-dictionary-icon.png"
+  //   link="https://github.com/pdt1806/pocket-hanzi-dictionary/releases/"
+  //   source="https://github.com/pdt1806/pocket-hanzi-dictionary"
+  // ></WorksBox>,
+  // <WorksBox
+  //   title="Legacy personal website"
+  //   description="Legacy personal website written in pure HTML5, CSS, and JavaScript."
+  //   image="/images/works/legacy-personal-website.png"
+  //   link="https://legacy.bennynguyen.us"
+  //   source="https://github.com/BNMP-Inc/legacy-personal-website"
+  // ></WorksBox>,
 ];
 
 const WorksContainer = () => {
@@ -62,15 +69,17 @@ const WorksContainer = () => {
       className="works-container d-flex justify-content-between align-items-center w-100 h-50"
       style={{ zIndex: "2" }}
     >
-      <img
-        src="/images/components/arrow-back.svg"
-        alt="Arrow Back"
-        className="ms-5"
-        style={{ height: "50px", width: "50px", filter: "invert(1)" }}
-        onClick={() =>
-          setIndex((index - 1 + projects.length) % projects.length)
-        }
-      />
+      <div
+        style={{ height: "100%", width: "150px" }}
+        className="d-flex justify-content-center align-items-center"
+        onClick={() => setIndex((index + 1) % projects.length)}
+      >
+        <img
+          src="/images/components/arrow-back.svg"
+          alt="Back"
+          style={{ height: "50px", width: "50px", filter: "invert(1)" }}
+        />
+      </div>
       {projects.map((project, i) => {
         return (
           <div
@@ -91,13 +100,17 @@ const WorksContainer = () => {
           </div>
         );
       })}
-      <img
-        src="/images/components/arrow-forward.svg"
-        alt="Arrow Forward"
-        className="me-5"
-        style={{ height: "50px", width: "50px", filter: "invert(1)" }}
+      <div
+        style={{ height: "100%", width: "150px" }}
+        className="d-flex justify-content-center align-items-center"
         onClick={() => setIndex((index + 1) % projects.length)}
-      />
+      >
+        <img
+          src="/images/components/arrow-forward.svg"
+          alt="Next"
+          style={{ height: "50px", width: "50px", filter: "invert(1)" }}
+        />
+      </div>
     </div>
   ) : (
     <div>

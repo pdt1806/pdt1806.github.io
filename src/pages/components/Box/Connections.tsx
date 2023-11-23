@@ -1,6 +1,13 @@
 const Connections = () => {
   return (
-    <div className="d-flex">
+    <div
+      className="d-flex"
+      style={{
+        width: "100%",
+        maxWidth: "330px",
+        justifyContent: "space-between",
+      }}
+    >
       <a href="https://github.com/pdt1806" target="_blank">
         <img
           style={{ filter: "invert(1)" }}

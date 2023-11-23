@@ -33,17 +33,19 @@ export default function WorksBox(props: BoxProps) {
         flexDirection: isMobile ? "column" : "row",
       }}
     >
-      <img
-        src={props.image}
-        alt={props.title}
-        style={{
-          borderRadius: "20px",
-          width: !isMobile ? "auto" : "50%",
-          maxWidth: isMobile ? "400px" : "none",
-          marginBottom: !isMobile ? "0px" : "20px",
-          height: !isMobile ? "" : "auto",
-        }}
-      />
+      <a href={props.link} target="_blank">
+        <img
+          src={props.image}
+          alt={props.title}
+          style={{
+            borderRadius: "20px",
+            width: !isMobile ? "auto" : "50%",
+            maxWidth: isMobile ? "400px" : "none",
+            marginBottom: !isMobile ? "0px" : "20px",
+            height: !isMobile ? "" : "auto",
+          }}
+        />
+      </a>
       <div
         style={{
           width: isMobile ? "90%" : "60%",

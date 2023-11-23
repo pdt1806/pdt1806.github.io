@@ -56,6 +56,14 @@ export default function ContactMe() {
           <LightBlueBox position="right">
             <p style={{ fontWeight: "bold" }}>Social Links</p>
             <Connections />
+            <iframe
+              className="mt-5"
+              src="https://disi.bennynguyen.us/smallcard?id=458550515614351360&bg=ffffff"
+              name="disi-small-card"
+              style={{ borderRadius: "20px" }}
+              height="100px"
+              width="300px"
+            ></iframe>
           </LightBlueBox>
         )}
       </div>
@@ -217,6 +225,14 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
           >
             <p style={{ fontWeight: "bold" }}>Social Links</p>
             <Connections />
+            <iframe
+              className="mt-5"
+              src="http://localhost:5174/smallcard?id=458550515614351360&bg=ffffff"
+              name="disi-small-card"
+              style={{ borderRadius: "20px" }}
+              height="100px"
+              width="300px"
+            ></iframe>
           </div>
         )}
       </div>

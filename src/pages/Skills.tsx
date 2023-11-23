@@ -149,6 +149,13 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
           alt="Express.js"
           title="Express.js"
         />
+        <img
+          style={{ filter: "invert(1)" }}
+          src="/icon/tech/flask.svg"
+          className="tech-icon"
+          alt="Flask"
+          title="Flask"
+        />
       </Box>
       <Box title="Libraries">
         <img
@@ -162,6 +169,12 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
           className="tech-icon"
           alt="Axios"
           title="Axios"
+        />
+        <img
+          src="/icon/tech/puppeteer.svg"
+          className="tech-icon"
+          alt="Puppeteer"
+          title="Puppeteer"
         />
       </Box>
       <div style={{ transform: !isMobile ? "translate(8vh)" : "" }}>

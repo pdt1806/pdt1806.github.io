@@ -23,7 +23,9 @@ export default function MyValues() {
   return (
     <div
       className="vstack gap-3 d-flex h-100"
-      style={{ justifyContent: isMobile ? "" : "center" }}
+      style={{
+        justifyContent: isMobile ? "" : "center",
+      }}
     >
       {!isMobile && (
         <img

@@ -82,7 +82,7 @@ export function AboutMeInfo({ isMobile }: { isMobile: boolean }) {
         <span style={{ fontWeight: "bold" }}>unique</span>.
       </AboutMeText>
       <AboutMeText>
-        Talking about my hobbies, it's clear that{" "}
+        Talking about my hobbies, it is clear that{" "}
         <span style={{ fontWeight: "bold" }}>I really enjoy programming.</span>{" "}
         I also like <span style={{ fontWeight: "bold" }}>watching anime</span>{" "}
         and{" "}

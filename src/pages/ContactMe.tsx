@@ -38,7 +38,15 @@ export default function ContactMe() {
 
   return (
     <>
-      <div id="contact-me" className="vstack gap-3 h-100">
+      <div
+        id="contact-me"
+        className="vstack gap-3 h-100"
+        style={{
+          background: isMobile
+            ? "linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 40%, rgba(44,159,195,1) 100%)"
+            : "",
+        }}
+      >
         <h1
           className="section-title z-0"
           style={{
@@ -221,18 +229,26 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
           <div
             style={{
               marginBottom: "3rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
             <p style={{ fontWeight: "bold" }}>Social Links</p>
             <Connections />
-            <iframe
-              className="mt-5"
-              src="http://localhost:5174/smallcard?id=458550515614351360&bg=ffffff"
-              name="disi-small-card"
-              style={{ borderRadius: "20px" }}
-              height="100px"
-              width="300px"
-            ></iframe>
+            <a
+              href="https://discord.com/users/458550515614351360"
+              target="_blank"
+            >
+              <img
+                style={{ borderRadius: "20px" }}
+                height="100px"
+                width="300px"
+                className="mt-5"
+                alt="disi-small-card"
+                src="https://disi-api.bennynguyen.us/smallcard/458550515614351360?bg=FFFFFF"
+              ></img>
+            </a>
           </div>
         )}
       </div>

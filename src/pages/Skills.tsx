@@ -25,9 +25,6 @@ export default function Skills() {
       <div
         className="vstack gap-3 d-flex justify-content-center"
         style={{
-          background: isMobile
-            ? "linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(0,110,134,1) 30%, rgba(0,110,134,1) 70%, rgba(17,17,17,1) 100%)"
-            : "",
           height: !isMobile ? "100vh" : "",
           width: isMobile ? "100%" : "",
           flexDirection: isMobile ? "column" : "row",

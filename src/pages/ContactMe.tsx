@@ -38,15 +38,7 @@ export default function ContactMe() {
 
   return (
     <>
-      <div
-        id="contact-me"
-        className="vstack gap-3 h-100"
-        style={{
-          background: isMobile
-            ? "linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 40%, rgba(44,159,195,1) 100%)"
-            : "",
-        }}
-      >
+      <div id="contact-me" className="vstack gap-3 h-100">
         <h1
           className="section-title z-0"
           style={{

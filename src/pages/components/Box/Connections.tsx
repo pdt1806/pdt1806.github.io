@@ -1,6 +1,17 @@
+import { useState } from "react";
+
 const Connections = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
   return (
-    <div className="d-flex">
+    <div
+      className="d-flex"
+      style={{
+        width: "70%",
+        maxWidth: "320px",
+        minWidth: isMobile ? "240px" : "277px",
+        justifyContent: "space-between",
+      }}
+    >
       <a href="https://github.com/pdt1806" target="_blank">
         <img
           style={{ filter: "invert(1)" }}

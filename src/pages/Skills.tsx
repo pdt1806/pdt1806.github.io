@@ -118,29 +118,22 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
           title="Flutter"
         />
         <img
+          src="/icon/tech/react.svg"
+          className="tech-icon"
+          alt="React"
+          title="React"
+        />
+        <img
           src="/icon/tech/bootstrap.svg"
           className="tech-icon"
           alt="Bootstrap"
           title="Bootstrap"
         />
         <img
-          src="/icon/tech/mantine.svg"
-          className="tech-icon"
-          alt="Mantine"
-          title="Mantine"
-        />
-        <img
           src="/icon/tech/phaser.svg"
           className="tech-icon"
           alt="Phaser"
           title="Phaser"
-        />
-        <img
-          style={{ filter: "invert(1)" }}
-          src="/icon/tech/socket-io.svg"
-          className="tech-icon"
-          alt="Socket.IO"
-          title="Socket.IO"
         />
         <img
           style={{ filter: "invert(1)" }}
@@ -159,10 +152,10 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
       </Box>
       <Box title="Libraries">
         <img
-          src="/icon/tech/react.svg"
+          src="/icon/tech/mantine.svg"
           className="tech-icon"
-          alt="React"
-          title="React"
+          alt="Mantine"
+          title="Mantine"
         />
         <img
           src="/icon/tech/axios.svg"
@@ -176,6 +169,13 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
           alt="Puppeteer"
           title="Puppeteer"
         />
+        <img
+          style={{ filter: "invert(1)" }}
+          src="/icon/tech/socket-io.svg"
+          className="tech-icon"
+          alt="Socket.IO"
+          title="Socket.IO"
+        />
       </Box>
       <div style={{ transform: !isMobile ? "translate(8vh)" : "" }}>
         <Box title="Databases and Others">
@@ -186,12 +186,12 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
             alt="PocketBase"
             title="PocketBase"
           />
-          <img
+          {/* <img
             src="/icon/tech/vite.svg"
             className="tech-icon"
             alt="Vite"
             title="Vite"
-          />
+          /> */}
           <img
             src="/icon/tech/nodejs.svg"
             className="tech-icon"
@@ -217,6 +217,12 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
             title="NGINX"
           />
           <img
+            src="/icon/tech/cloudflare.svg"
+            className="tech-icon"
+            alt="Cloudflare"
+            title="Cloudflare"
+          />
+          <img
             src="/icon/tech/arduino.svg"
             className="tech-icon"
             alt="Arduino"
@@ -228,13 +234,13 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
             alt="Raspberry Pi"
             title="Raspberry Pi"
           />
-          <img
+          {/* <img
             style={{ filter: "invert(1)" }}
             src="/icon/tech/gradle.svg"
             className="tech-icon"
             alt="Gradle"
             title="Gradle"
-          />
+          /> */}
           {/* <img
               src="/icon/tech/docker.svg"
               className="tech-icon"
@@ -247,7 +253,7 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
               alt="Jenkins"
               title="Jenkins"
             /> */}
-          <img
+          {/* <img
             src="/icon/tech/heroku.svg"
             className="tech-icon"
             alt="Heroku"
@@ -258,7 +264,7 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
             className="tech-icon"
             alt="Netlify"
             title="Netlify"
-          />
+          /> */}
           <img
             src="/icon/tech/vscode.svg"
             className="tech-icon"

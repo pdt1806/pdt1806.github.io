@@ -12,7 +12,7 @@ const projects = [
   ></WorksBox>,
   <WorksBox
     title="ERG Wordle"
-    description="A replica of the popular game Wordle using pure HTML5, CSS and JavaScript."
+    description="A remake of the popular game Wordle using pure HTML5, CSS and JavaScript."
     image="/images/works/wordle-icon.png"
     link="https://wordle.bennynguyen.us"
     source="https://github.com/pdt1806/erg-wordle"

@@ -389,6 +389,14 @@ section {
   border: none;
 }
 
+#submit-button:hover {
+  background-color: #00d1de;
+}
+
+#submit-button:active {
+  background-color: #00c1cc;
+}
+
 #contactme a {
   color: white;
   text-decoration: none;

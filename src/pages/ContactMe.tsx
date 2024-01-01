@@ -9,29 +9,21 @@ import { LightBlueBox } from "./components/Box/LightBlueBox";
 
 export default function ContactMe() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+  const [isSmall, setIsSmall] = useState(window.innerHeight < 768);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1280);
     };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const [isSmall, setIsSmall] = useState(window.innerHeight < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
+    const handleResizeSmall = () => {
       setIsSmall(window.innerHeight < 768);
     };
 
+    window.addEventListener("resize", handleResizeSmall);
     window.addEventListener("resize", handleResize);
 
     return () => {
+      window.removeEventListener("resize", handleResizeSmall);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -93,7 +85,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
   const [isHuman, setIsHuman] = useState(false);
 
   const captchaVerify = () => {
-    isHuman ? setIsHuman(false) : setIsHuman(true);
+    setIsHuman(!isHuman);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -140,9 +132,14 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             fullName: fullName,
             email: email,
             message: message,
+            "g-recaptcha-response": (
+              document.getElementsByName(
+                "g-recaptcha-response"
+              )[0] as HTMLInputElement
+            ).value,
           }),
         });
-        response.status !== 200 || (await response.text()) !== "sent"
+        response.status !== 200
           ? setEmailSent("An error occurred. Please try again later.")
           : setEmailSent("Message sent successfully!");
         afterSending();

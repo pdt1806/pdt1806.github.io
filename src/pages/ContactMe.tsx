@@ -139,9 +139,9 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             ).value,
           }),
         });
-        response.status !== 200
-          ? setEmailSent("An error occurred. Please try again later.")
-          : setEmailSent("Message sent successfully!");
+        response.ok
+          ? setEmailSent("Message sent successfully!")
+          : setEmailSent("An error occurred. Please try again later.");
         afterSending();
       } catch (error) {
         setEmailSent("An error occurred. Please try again later.");

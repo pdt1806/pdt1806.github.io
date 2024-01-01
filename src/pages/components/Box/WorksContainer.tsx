@@ -7,14 +7,14 @@ const projects = [
     title="Discord Status as Image"
     description="Turn your Discord status into a simple, eye-catching image for easy sharing and display."
     image="/images/works/disi-logo.png"
-    link="https://disi.bennynguyen.us"
+    link="https://disi.bennynguyen.dev"
     source="https://github.com/pdt1806/discord-status-as-image"
   ></WorksBox>,
   <WorksBox
     title="ERG Wordle"
     description="A remake of the popular game Wordle using pure HTML5, CSS and JavaScript."
     image="/images/works/wordle-icon.png"
-    link="https://wordle.bennynguyen.us"
+    link="https://wordle.bennynguyen.dev"
     source="https://github.com/pdt1806/erg-wordle"
   ></WorksBox>,
   <WorksBox
@@ -28,7 +28,7 @@ const projects = [
     title="ERG Rock Paper Scissors"
     description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
     image="/images/works/ropas-title.png"
-    link="https://ropas.bennynguyen.us"
+    link="https://ropas.bennynguyen.dev"
     source="https://github.com/pdt1806/erg-rock-paper-scissors"
   ></WorksBox>,
   // <WorksBox
@@ -42,7 +42,7 @@ const projects = [
   //   title="Legacy personal website"
   //   description="Legacy personal website written in pure HTML5, CSS, and JavaScript."
   //   image="/images/works/legacy-personal-website.png"
-  //   link="https://legacy.bennynguyen.us"
+  //   link="https://legacy.bennynguyen.dev"
   //   source="https://github.com/BNMP-Inc/legacy-personal-website"
   // ></WorksBox>,
 ];

@@ -58,7 +58,7 @@ export default function ContactMe() {
             <Connections />
             <iframe
               className="mt-5"
-              src="https://disi.bennynguyen.us/smallcard?id=458550515614351360&bg=ffffff"
+              src="https://disi.bennynguyen.dev/smallcard?id=458550515614351360&bg=ffffff"
               name="disi-small-card"
               style={{ borderRadius: "20px" }}
               height="100px"
@@ -131,7 +131,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
         return;
       }
       try {
-        const response = await fetch("https://webemail.bennynguyen.us/", {
+        const response = await fetch("https://webemail.bennynguyen.dev/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -210,8 +210,8 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
           }}
         >
           <p style={{ fontWeight: "bold" }}>Contact me</p>
-          <a href="mailto:contact@bennynguyen.us">
-            <p>contact@bennynguyen.us</p>
+          <a href="mailto:contact@bennynguyen.dev">
+            <p>contact@bennynguyen.dev</p>
           </a>
           <br />
           <p style={{ fontWeight: "bold" }}>Based in</p>
@@ -238,7 +238,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
                 width="300px"
                 className="mt-5"
                 alt="disi-small-card"
-                src="https://disi-api.bennynguyen.us/smallcard/458550515614351360?bg=FFFFFF"
+                src="https://disi-api.bennynguyen.dev/smallcard/458550515614351360?bg=FFFFFF"
               ></img>
             </a>
           </div>

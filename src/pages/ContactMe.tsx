@@ -190,7 +190,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             name="message"
           ></textarea>
           <ReCAPTCHA
-            sitekey="6LfeLqMnAAAAAKNqeaU1rJCln6rgiwDNdoHDLX0s"
+            sitekey="6LdnCkIpAAAAAKGhynf4oAl_6wzJapkYWNQYhDbg"
             theme="dark"
             onChange={captchaVerify}
             id="captcha"

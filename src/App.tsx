@@ -8,7 +8,7 @@ import ContactMe from "./pages/ContactMe";
 import Education from "./pages/Education";
 import Introduction from "./pages/Introduction";
 import MyValues from "./pages/MyValues";
-import Skills from "./pages/Skills";
+import Technologies from "./pages/Technologies";
 import Works from "./pages/Works";
 
 export default function App() {
@@ -31,10 +31,10 @@ export default function App() {
 
       function isElementInViewport(el: Element) {
         const rect = el.getBoundingClientRect();
-        if (el.id === "works" || el.id === "skills") {
+        if (el.id === "works" || el.id === "technologies") {
           return (
             rect.top <=
-            (el.id === "skills"
+            (el.id === "technologies"
               ? document.documentElement.clientHeight / 2
               : 300)
           );
@@ -82,8 +82,8 @@ export default function App() {
       <section id="education" className="section">
         <Education />
       </section>
-      <section id="skills" className="section">
-        <Skills />
+      <section id="technologies" className="section">
+        <Technologies />
       </section>
       <section id="works" className="section">
         <Works />

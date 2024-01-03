@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import "../App.css";
 import Box from "./components/Box/Box";
 
-export default function Skills() {
+export default function Technologies() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
 
   useEffect(() => {
@@ -33,12 +33,12 @@ export default function Skills() {
         {!isMobile && (
           <>
             <img
-              src="/images/components/skills-bg-1.png"
+              src="/images/components/technologies-bg-1.png"
               className="background-component"
               style={{ left: 0 }}
             />
             <img
-              src="/images/components/skills-bg-2.png"
+              src="/images/components/technologies-bg-2.png"
               className="background-component"
               style={{ right: 0 }}
             />
@@ -53,25 +53,62 @@ export default function Skills() {
             marginTop: isMobile ? "3rem" : "auto",
           }}
         >
-          Skills
+          Technologies
         </h1>
-        <SkillsInfo isMobile={isMobile} />
+        <TechnologiesInfo isMobile={isMobile} />
       </div>
     </div>
   );
 }
 
-export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
+export function TechnologiesInfo({ isMobile }: { isMobile?: boolean }) {
   return (
-    <div className="skills-box">
+    <div className="technologies-box">
       <div style={{ transform: !isMobile ? "translate(8vh)" : "" }}>
-        <Box title="Languages">
+        <Box title="Front-end Development">
           <img
-            src="/icon/tech/python.svg"
+            src="/icon/tech/react.svg"
             className="tech-icon"
-            alt="Python"
-            title="Python"
+            alt="React"
+            title="React"
           />
+          <img
+            src="/icon/tech/vite.svg"
+            className="tech-icon"
+            alt="Vite"
+            title="Vite"
+          />
+          <img
+            src="/icon/tech/mantine.svg"
+            className="tech-icon"
+            alt="Mantine"
+            title="Mantine"
+          />
+          <img
+            src="/icon/tech/bootstrap.svg"
+            className="tech-icon"
+            alt="Bootstrap"
+            title="Bootstrap"
+          />
+          <img
+            src="/icon/tech/flutter.svg"
+            className="tech-icon"
+            alt="Flutter"
+            title="Flutter"
+          />
+          <img
+            src="/icon/tech/javascript.svg"
+            className="tech-icon"
+            alt="JavaScript"
+            title="JavaScript"
+          />
+          <img
+            src="/icon/tech/typescript.svg"
+            className="tech-icon"
+            alt="TypeScript"
+            title="TypeScript"
+          />
+
           <img
             src="/icon/tech/dart.svg"
             className="tech-icon"
@@ -90,51 +127,41 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
             alt="CSS3"
             title="CSS3"
           />
-          <img
-            src="/icon/tech/javascript.svg"
-            className="tech-icon"
-            alt="JavaScript"
-            title="JavaScript"
-          />
-          <img
-            src="/icon/tech/typescript.svg"
-            className="tech-icon"
-            alt="TypeScript"
-            title="TypeScript"
-          />
-          <img
-            src="/icon/tech/java.svg"
-            className="tech-icon"
-            alt="Java"
-            title="Java"
-          />
         </Box>
       </div>
-      <Box title="Frameworks">
+      <Box title="Back-end Development">
         <img
-          src="/icon/tech/flutter.svg"
+          src="/icon/tech/nodejs.svg"
           className="tech-icon"
-          alt="Flutter"
-          title="Flutter"
+          alt="Node.js"
+          title="Node.js"
         />
         <img
-          src="/icon/tech/react.svg"
+          src="/icon/tech/npm.svg"
           className="tech-icon"
-          alt="React"
-          title="React"
+          alt="npm"
+          title="npm"
         />
         <img
-          src="/icon/tech/bootstrap.svg"
+          src="/icon/tech/bun.svg"
           className="tech-icon"
-          alt="Bootstrap"
-          title="Bootstrap"
+          alt="bun"
+          title="bun"
         />
         <img
-          src="/icon/tech/phaser.svg"
+          src="/icon/tech/python.svg"
           className="tech-icon"
-          alt="Phaser"
-          title="Phaser"
+          alt="Python"
+          title="Python"
         />
+        <img
+          src="/icon/tech/java.svg"
+          className="tech-icon"
+          alt="Java"
+          title="Java"
+        />
+      </Box>
+      <Box title="Tools, Libraries and Frameworks">
         <img
           style={{ filter: "invert(1)" }}
           src="/icon/tech/express-js.svg"
@@ -149,13 +176,11 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
           alt="Flask"
           title="Flask"
         />
-      </Box>
-      <Box title="Libraries">
         <img
-          src="/icon/tech/mantine.svg"
+          src="/icon/tech/fastapi.svg"
           className="tech-icon"
-          alt="Mantine"
-          title="Mantine"
+          alt="FastAPI"
+          title="FastAPI"
         />
         <img
           src="/icon/tech/axios.svg"
@@ -164,51 +189,45 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
           title="Axios"
         />
         <img
-          src="/icon/tech/puppeteer.svg"
-          className="tech-icon"
-          alt="Puppeteer"
-          title="Puppeteer"
-        />
-        <img
           style={{ filter: "invert(1)" }}
           src="/icon/tech/socket-io.svg"
           className="tech-icon"
           alt="Socket.IO"
           title="Socket.IO"
         />
+        <img
+          src="/icon/tech/puppeteer.svg"
+          className="tech-icon"
+          alt="Puppeteer"
+          title="Puppeteer"
+        />
+        <img
+          src="/icon/tech/postman.svg"
+          className="tech-icon"
+          alt="Postman"
+          title="Postman"
+        />
+        <img
+          style={{ filter: "invert(1)" }}
+          src="/icon/tech/gradle.svg"
+          className="tech-icon"
+          alt="Gradle"
+          title="Gradle"
+        />
+        <img
+          src="/icon/tech/phaser.svg"
+          className="tech-icon"
+          alt="Phaser"
+          title="Phaser"
+        />
       </Box>
       <div style={{ transform: !isMobile ? "translate(8vh)" : "" }}>
-        <Box title="Databases and Others">
+        <Box title="Web Servers, Databases and Others">
           <img
-            style={{ filter: "invert(1)" }}
-            src="/icon/tech/pocketbase.svg"
+            src="/icon/tech/raspberry-pi.svg"
             className="tech-icon"
-            alt="PocketBase"
-            title="PocketBase"
-          />
-          {/* <img
-            src="/icon/tech/vite.svg"
-            className="tech-icon"
-            alt="Vite"
-            title="Vite"
-          /> */}
-          <img
-            src="/icon/tech/nodejs.svg"
-            className="tech-icon"
-            alt="Node.js"
-            title="Node.js"
-          />
-          <img
-            src="/icon/tech/npm.svg"
-            className="tech-icon"
-            alt="npm"
-            title="npm"
-          />
-          <img
-            src="/icon/tech/bun.svg"
-            className="tech-icon"
-            alt="bun"
-            title="bun"
+            alt="Raspberry Pi"
+            title="Raspberry Pi"
           />
           <img
             src="/icon/tech/nginx.svg"
@@ -217,29 +236,23 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
             title="NGINX"
           />
           <img
+            style={{ filter: "invert(1)" }}
+            src="/icon/tech/pocketbase.svg"
+            className="tech-icon"
+            alt="PocketBase"
+            title="PocketBase"
+          />
+          <img
             src="/icon/tech/cloudflare.svg"
             className="tech-icon"
             alt="Cloudflare"
             title="Cloudflare"
           />
-          <img
+          {/* <img
             src="/icon/tech/arduino.svg"
             className="tech-icon"
             alt="Arduino"
             title="Arduino"
-          />
-          <img
-            src="/icon/tech/raspberry-pi.svg"
-            className="tech-icon"
-            alt="Raspberry Pi"
-            title="Raspberry Pi"
-          />
-          {/* <img
-            style={{ filter: "invert(1)" }}
-            src="/icon/tech/gradle.svg"
-            className="tech-icon"
-            alt="Gradle"
-            title="Gradle"
           /> */}
           {/* <img
               src="/icon/tech/docker.svg"
@@ -265,17 +278,23 @@ export function SkillsInfo({ isMobile }: { isMobile?: boolean }) {
             alt="Netlify"
             title="Netlify"
           /> */}
-          <img
+          {/* <img
             src="/icon/tech/vscode.svg"
             className="tech-icon"
             alt="Visual Studio Code"
             title="Visual Studio Code"
-          />
+          /> */}
           <img
             src="/icon/tech/photoshop.svg"
             className="tech-icon"
             alt="Adobe Photoshop"
             title="Adobe Photoshop"
+          />
+          <img
+            src="/icon/tech/illustrator.svg"
+            className="tech-icon"
+            alt="Adobe Illustrator"
+            title="Adobe Illustrator"
           />
           <img
             src="/icon/tech/figma.svg"

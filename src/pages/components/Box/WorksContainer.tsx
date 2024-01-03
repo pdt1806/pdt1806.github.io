@@ -31,6 +31,14 @@ const projects = [
     link="https://ropas.bennynguyen.dev"
     source="https://github.com/pdt1806/erg-rock-paper-scissors"
   ></WorksBox>,
+  <WorksBox
+    title="Emochoice Web Store"
+    description="The web store of Emochoice, a print-on-demand store in Canada. Built with React, TypeScript and Mantine."
+    image="https://emochoice.ca/images/logo.svg"
+    link="https://emochoice.ca"
+    source="https://github.com/tobycm/emochoice"
+    owner={{ name: "tobycm", link: "https://github.com/tobycm" }}
+  ></WorksBox>,
   // <WorksBox
   //   title="Pocket Hanzi Dictionary"
   //   description="A simple extension that makes learning Chinese characters easier."
@@ -67,17 +75,25 @@ const WorksContainer = () => {
   return !isMobile ? (
     <div
       className="works-container d-flex justify-content-between align-items-center w-100 h-50"
-      style={{ zIndex: "2" }}
+      style={{ zIndex: "2", userSelect: "none" }}
     >
       <div
         style={{ height: "100%", width: "150px" }}
         className="d-flex justify-content-center align-items-center"
-        onClick={() => setIndex((index + 1) % projects.length)}
+        onClick={() =>
+          setIndex((index - 1 + projects.length) % projects.length)
+        }
       >
         <img
           src="/images/components/arrow-back.svg"
           alt="Back"
-          style={{ height: "50px", width: "50px", filter: "invert(1)" }}
+          style={{
+            height: "50px",
+            width: "50px",
+            filter: "invert(1)",
+            userSelect: "none",
+            pointerEvents: "none",
+          }}
         />
       </div>
       {projects.map((project, i) => {
@@ -108,7 +124,13 @@ const WorksContainer = () => {
         <img
           src="/images/components/arrow-forward.svg"
           alt="Next"
-          style={{ height: "50px", width: "50px", filter: "invert(1)" }}
+          style={{
+            height: "50px",
+            width: "50px",
+            filter: "invert(1)",
+            userSelect: "none",
+            pointerEvents: "none",
+          }}
         />
       </div>
     </div>

@@ -28,8 +28,8 @@ export default function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#skills">
-                Skills
+              <a className="nav-link" href="#technologies">
+                Technologies
               </a>
             </li>
             <li className="nav-item">

@@ -9,6 +9,10 @@ interface BoxProps {
   image: string;
   link: string;
   source: string;
+  owner?: {
+    name: string;
+    link: string;
+  };
 }
 
 export default function WorksBox(props: BoxProps) {
@@ -60,18 +64,35 @@ export default function WorksBox(props: BoxProps) {
           <h3 className="works-title mb-3">{props.title}</h3>
         )}
         <p>{props.description}</p>
-        {props.source !== "" ? (
-          <a href={props.source} target="_blank">
-            <img
-              src="/icon/tech/github.svg"
-              title="Source Code"
-              className="tech-icon"
-              style={{ filter: "invert(1)", marginTop: "20px" }}
-            />
-          </a>
-        ) : (
-          <></>
-        )}
+        <div
+          className="d-flex align-items-center"
+          style={{
+            marginTop: "20px",
+            width: "min-content",
+            marginLeft: isMobile ? "auto" : "",
+            marginRight: isMobile ? "auto" : "",
+          }}
+        >
+          {props.source !== "" && (
+            <a href={props.source} target="_blank">
+              <img
+                src="/icon/tech/github.svg"
+                title="Source Code"
+                className="tech-icon"
+                style={{ filter: "invert(1)", marginRight: "15px" }}
+              />
+            </a>
+          )}
+          {props.owner && (
+            <a
+              href={props.owner.link}
+              style={{ textDecoration: "none", color: "white" }}
+              target="_blank"
+            >
+              <p title="Project Owner">@{props.owner.name}</p>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

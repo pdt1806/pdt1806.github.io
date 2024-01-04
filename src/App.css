@@ -21,7 +21,8 @@ body {
   background-color: #888;
 }
 
-h5 {
+.email-sent {
+  font-size: 20px !important;
   margin-bottom: 0 !important;
 }
 
@@ -170,7 +171,7 @@ section {
     padding-top: 20px !important;
     padding-bottom: 20px !important;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url("/images/components/aboutme-bg-1.jpg") no-repeat center/cover !important;
+      url("/images/components/aboutme-bg-1.webp") no-repeat center/cover !important;
   }
   .aboutme-text {
     width: 80% !important;
@@ -282,9 +283,10 @@ section {
 }
 
 .tech-icon {
-  margin: 3px 4px 3px 4px;
+  margin: 3px 4px 10px 4px;
   width: 32px !important;
   height: 32px !important;
+  min-height: 32px !important;
 }
 
 .connections-icon {
@@ -353,7 +355,9 @@ section {
   padding-right: 10px;
 }
 
-#text-input {
+#name,
+#email,
+#message {
   border-radius: 12px;
   border: 2px solid #00f0ff;
   background-color: transparent;
@@ -368,14 +372,18 @@ section {
 }
 
 @media only screen and (max-width: 1279px) {
-  #text-input {
+  #name,
+  #email,
+  #message {
     width: 80vw !important;
     max-width: 500px !important;
     min-width: 300px !important;
   }
 }
 
-#text-input:focus {
+#name:focus,
+#email:focus,
+#message:focus {
   border: 2px solid #ffffff;
 }
 
@@ -416,13 +424,13 @@ section {
 }
 
 @media only screen and (max-width: 500px) {
-  h5 {
+  .email-sent {
     font-size: 15px !important;
   }
 }
 
 @media only screen and (max-width: 390px) {
-  h5 {
+  .email-sent {
     font-size: 13px !important;
   }
 }

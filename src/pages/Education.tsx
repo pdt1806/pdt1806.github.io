@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import "../App.css";
-import SchoolBox from "./components/Box/SchoolBox";
+import SchoolBox from "./components/SchoolBox";
 
 const Education = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -25,8 +25,9 @@ const Education = () => {
       <div className="vstack gap-2">
         {!isMobile && (
           <img
-            src="/images/components/education-bg.png"
+            src="/images/components/education-bg.webp"
             className="background-component"
+            alt="education-bg"
             style={{ right: 0 }}
           />
         )}

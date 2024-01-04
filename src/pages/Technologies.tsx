@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import "../App.css";
-import Box from "./components/Box/Box";
+import TechnologiesBox from "./components/TechnologiesBox";
 
 export default function Technologies() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -33,14 +33,16 @@ export default function Technologies() {
         {!isMobile && (
           <>
             <img
-              src="/images/components/technologies-bg-1.png"
+              src="/images/components/technologies-bg-1.webp"
               className="background-component"
               style={{ left: 0 }}
+              alt="technologies-bg-1"
             />
             <img
-              src="/images/components/technologies-bg-2.png"
+              src="/images/components/technologies-bg-2.webp"
               className="background-component"
               style={{ right: 0 }}
+              alt="technologies-bg-2"
             />
           </>
         )}
@@ -65,7 +67,7 @@ export function TechnologiesInfo({ isMobile }: { isMobile?: boolean }) {
   return (
     <div className="technologies-box">
       <div style={{ transform: !isMobile ? "translate(8vh)" : "" }}>
-        <Box title="Front-end Development">
+        <TechnologiesBox title="Front-end Development">
           <img
             src="/icon/tech/react.svg"
             className="tech-icon"
@@ -127,9 +129,9 @@ export function TechnologiesInfo({ isMobile }: { isMobile?: boolean }) {
             alt="CSS3"
             title="CSS3"
           />
-        </Box>
+        </TechnologiesBox>
       </div>
-      <Box title="Back-end Development">
+      <TechnologiesBox title="Back-end Development">
         <img
           src="/icon/tech/nodejs.svg"
           className="tech-icon"
@@ -160,8 +162,8 @@ export function TechnologiesInfo({ isMobile }: { isMobile?: boolean }) {
           alt="Java"
           title="Java"
         />
-      </Box>
-      <Box title="Tools, Libraries and Frameworks">
+      </TechnologiesBox>
+      <TechnologiesBox title="Tools, Libraries and Frameworks">
         <img
           style={{ filter: "invert(1)" }}
           src="/icon/tech/express-js.svg"
@@ -220,9 +222,9 @@ export function TechnologiesInfo({ isMobile }: { isMobile?: boolean }) {
           alt="Phaser"
           title="Phaser"
         />
-      </Box>
+      </TechnologiesBox>
       <div style={{ transform: !isMobile ? "translate(8vh)" : "" }}>
-        <Box title="Web Servers, Databases and Others">
+        <TechnologiesBox title="Web Servers, Databases and Others">
           <img
             src="/icon/tech/raspberry-pi.svg"
             className="tech-icon"
@@ -302,7 +304,7 @@ export function TechnologiesInfo({ isMobile }: { isMobile?: boolean }) {
             alt="Figma"
             title="Figma"
           />
-        </Box>
+        </TechnologiesBox>
       </div>
     </div>
   );

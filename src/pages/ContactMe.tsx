@@ -4,8 +4,8 @@ import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../App.css";
-import Connections from "./components/Box/Connections";
-import { LightBlueBox } from "./components/Box/LightBlueBox";
+import Connections from "./components/Connections";
+import { LightBlueBox } from "./components/LightBlueBox";
 
 export default function ContactMe() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -52,6 +52,7 @@ export default function ContactMe() {
               className="mt-5"
               src="https://disi.bennynguyen.dev/smallcard?id=458550515614351360&bg=ffffff"
               name="disi-small-card"
+              title="Discord"
               style={{ borderRadius: "20px" }}
               height="100px"
               width="300px"
@@ -168,20 +169,20 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
         >
           <input
             type="text"
-            id="text-input"
+            id="name"
             placeholder="Full name"
             className="non-message"
             name="full-name"
           ></input>
           <input
             type="text"
-            id="text-input"
+            id="email"
             placeholder="Email"
             className="non-message"
             name="email"
           ></input>
           <textarea
-            id="text-input"
+            id="message"
             placeholder="Message"
             className="message"
             name="message"
@@ -197,7 +198,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             style={{ marginTop: "2vh" }}
           >
             <input type="submit" id="submit-button" value="Send"></input>
-            {emailSent !== "" && <h5>{emailSent}</h5>}
+            {emailSent !== "" && <p className="email-sent">{emailSent}</p>}
           </div>
         </form>
         <div

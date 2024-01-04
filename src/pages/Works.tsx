@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import "../App.css";
-import WorksContainer from "./components/Box/WorksContainer";
+import WorksContainer from "./components/WorksContainer";
 
 export default function Works() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -44,13 +44,13 @@ export default function Works() {
       >
         {!isMobile && (
           <img
-            src="/images/components/works-bg.png"
+            src="/images/components/works-bg.webp"
             className="background-component"
             style={{
-              height: "100%",
               maxWidth: !isMobile ? "99%" : "none",
               zIndex: "0",
             }}
+            alt="works-bg"
           />
         )}
         <WorksContainer />

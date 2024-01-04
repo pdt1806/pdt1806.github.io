@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import "../App.css";
-import Connections from "./components/Box/Connections";
-import { LightBlueBox } from "./components/Box/LightBlueBox";
+import Connections from "./components/Connections";
+import { LightBlueBox } from "./components/LightBlueBox";
 
 export default function Introduction() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -61,7 +61,7 @@ export function IntroductionInfo({ isMobile }: { isMobile: boolean }) {
         </div>
       </div>
       <img
-        src="/images/me.jpg"
+        src="/images/me.webp"
         alt="Me"
         className="img-fluid introduction-img"
       />

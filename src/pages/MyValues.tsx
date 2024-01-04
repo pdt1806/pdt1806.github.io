@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import "../App.css";
-import ValueCard from "./components/Box/ValueCard";
+import ValueCard from "./components/ValueCard";
 
 export default function MyValues() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -29,8 +29,9 @@ export default function MyValues() {
     >
       {!isMobile && (
         <img
-          src="/images/components/my-values-bg.png"
+          src="/images/components/my-values-bg.webp"
           className="background-component"
+          alt="my-values-bg"
           style={{ right: 0 }}
         />
       )}
@@ -54,16 +55,16 @@ export default function MyValues() {
         <div className="d-flex">
           <ValueCard
             title="Determination"
-            img="images/components/value-1.png"
+            img="images/components/value-1.webp"
           />
-          <ValueCard title="Thoughtful" img="images/components/value-2.png" />
+          <ValueCard title="Thoughtful" img="images/components/value-2.webp" />
         </div>
         <div className="d-flex">
           <ValueCard
             title="Collaborative"
-            img="images/components/value-3.png"
+            img="images/components/value-3.webp"
           />
-          <ValueCard title="Discipline" img="images/components/value-4.png" />
+          <ValueCard title="Discipline" img="images/components/value-4.webp" />
         </div>
       </div>
     </div>

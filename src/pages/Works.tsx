@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
+
 import { useEffect, useState } from "react";
-import "../App.css";
+
 import WorksContainer from "./components/WorksContainer";
 
 export default function Works() {
@@ -44,6 +44,7 @@ export default function Works() {
       >
         {!isMobile && (
           <img
+            loading="lazy"
             src="/images/components/works-bg.webp"
             className="background-component"
             style={{

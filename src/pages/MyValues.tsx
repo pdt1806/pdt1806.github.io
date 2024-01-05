@@ -1,8 +1,8 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
+
 import { useEffect, useState } from "react";
-import "../App.css";
+
 import ValueCard from "./components/ValueCard";
 
 export default function MyValues() {
@@ -29,6 +29,7 @@ export default function MyValues() {
     >
       {!isMobile && (
         <img
+          loading="lazy"
           src="/images/components/my-values-bg.webp"
           className="background-component"
           alt="my-values-bg"

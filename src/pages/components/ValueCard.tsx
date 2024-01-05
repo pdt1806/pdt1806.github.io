@@ -32,6 +32,7 @@ const ValueCard = (props: ValueCardProps) => {
         {props.title}
       </h2>
       <img
+        loading="lazy"
         src={props.img}
         alt="value"
         style={{

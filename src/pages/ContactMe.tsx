@@ -1,9 +1,9 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
+
 import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import "../App.css";
+
 import Connections from "./components/Connections";
 import { LightBlueBox } from "./components/LightBlueBox";
 
@@ -168,6 +168,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
           onSubmit={handleSubmit}
         >
           <input
+            autoComplete="name"
             type="text"
             id="name"
             placeholder="Full name"
@@ -175,6 +176,7 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             name="full-name"
           ></input>
           <input
+            autoComplete="email"
             type="text"
             id="email"
             placeholder="Email"

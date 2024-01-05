@@ -14,6 +14,7 @@ const Connections = () => {
     >
       <a href="https://github.com/pdt1806" target="_blank">
         <img
+          loading="lazy"
           style={{ filter: "invert(1)" }}
           src="/icon/tech/github.svg"
           className="connections-icon"
@@ -23,6 +24,7 @@ const Connections = () => {
       </a>
       <a href="https://instagram.com/benny_ng08" target="_blank">
         <img
+          loading="lazy"
           style={{ filter: "invert(1)" }}
           src="/icon/social-media/instagram.svg"
           className="connections-icon"
@@ -32,6 +34,7 @@ const Connections = () => {
       </a>
       <a href="https://facebook.com/pdteggman" target="_blank">
         <img
+          loading="lazy"
           style={{ filter: "invert(1)" }}
           src="/icon/social-media/facebook.svg"
           className="connections-icon"
@@ -41,6 +44,7 @@ const Connections = () => {
       </a>
       <a href="https://x.com/pdteggman" target="_blank">
         <img
+          loading="lazy"
           style={{ filter: "invert(1)" }}
           src="/icon/social-media/x.svg"
           className="connections-icon"

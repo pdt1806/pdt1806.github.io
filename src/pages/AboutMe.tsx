@@ -1,8 +1,8 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
+
 import { useEffect, useState } from "react";
-import "../App.css";
+
 import AboutMeText from "./components/AboutMeText";
 
 export default function AboutMe() {
@@ -39,16 +39,19 @@ export default function AboutMe() {
           {!isMobile && (
             <>
               <img
+                loading="lazy"
                 src="/images/components/aboutme-bg-1.webp"
                 className="aboutme-img"
                 alt="aboutme-bg-1"
               />
               <img
+                loading="lazy"
                 src="/images/components/aboutme-bg-2.webp"
                 className="aboutme-img"
                 alt="aboutme-bg-2"
               />
               <img
+                loading="lazy"
                 src="/images/components/aboutme-bg-3.webp"
                 className="aboutme-img"
                 alt="aboutme-bg-3"

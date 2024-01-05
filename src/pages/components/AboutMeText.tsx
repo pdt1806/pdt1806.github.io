@@ -1,6 +1,5 @@
 import "aos/dist/aos.css";
 import React from "react";
-import "../../App.css";
 
 interface AboutMeTextProps {
   children?: React.ReactNode;

@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
+
 import { useEffect, useState } from "react";
-import "../../App.css";
 
 interface BoxProps {
   title: string;
@@ -39,6 +38,7 @@ export default function WorksBox(props: BoxProps) {
     >
       <a href={props.link} target="_blank">
         <img
+          loading="lazy"
           src={props.image}
           alt={props.title}
           style={{
@@ -59,10 +59,10 @@ export default function WorksBox(props: BoxProps) {
       >
         {props.link !== "" ? (
           <a href={props.link} target="_blank" className="anchor">
-            <h5 className="works-title mb-3">{props.title}</h5>
+            <p className="works-title mb-2">{props.title}</p>
           </a>
         ) : (
-          <h5 className="works-title mb-3">{props.title}</h5>
+          <p className="works-title mb-2">{props.title}</p>
         )}
         <p>{props.description}</p>
         <div
@@ -77,6 +77,7 @@ export default function WorksBox(props: BoxProps) {
           {props.source !== "" && (
             <a href={props.source} target="_blank">
               <img
+                loading="lazy"
                 src="/icon/tech/github.svg"
                 title="Source Code"
                 className="tech-icon"

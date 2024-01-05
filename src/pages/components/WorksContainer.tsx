@@ -34,7 +34,7 @@ const projects = [
   <WorksBox
     title="Emochoice Web Store"
     description="The web store of Emochoice, a print-on-demand store in Canada. Built with React, TypeScript and Mantine."
-    image="https://emochoice.ca/images/logo.svg"
+    image="/images/works/emochoice.svg"
     link="https://emochoice.ca"
     source="https://github.com/tobycm/emochoice"
     owner={{ name: "tobycm", link: "https://github.com/tobycm" }}
@@ -85,6 +85,7 @@ const WorksContainer = () => {
         }
       >
         <img
+          loading="lazy"
           src="/images/components/arrow-back.svg"
           alt="Back"
           style={{
@@ -122,6 +123,7 @@ const WorksContainer = () => {
         onClick={() => setIndex((index + 1) % projects.length)}
       >
         <img
+          loading="lazy"
           src="/images/components/arrow-forward.svg"
           alt="Next"
           style={{

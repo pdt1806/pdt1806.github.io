@@ -1,8 +1,9 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
-import { useEffect, useState } from "react";
-import "../App.css";
+
+import { useEffect, useLayoutEffect, useState } from "react";
+import { Blurhash } from "react-blurhash";
+
 import Connections from "./components/Connections";
 import { LightBlueBox } from "./components/LightBlueBox";
 
@@ -35,6 +36,40 @@ export default function Introduction() {
 }
 
 export function IntroductionInfo({ isMobile }: { isMobile: boolean }) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageWidth, setImageWidth] = useState(450);
+  const [imageHeight, setImageHeight] = useState(580);
+  const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
+
+  useLayoutEffect(() => {
+    const img = new Image();
+    img.src = "/images/me.webp";
+    img.onload = () => {
+      setImageLoaded(true);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCurrentWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [window.innerWidth]);
+
+  useEffect(() => {
+    let imgWidth = 450;
+    if (currentWidth < 1537) imgWidth = 400;
+    if (currentWidth < 1280) imgWidth = currentWidth / 2;
+    if (currentWidth < 721) imgWidth = currentWidth * 0.75;
+    setImageWidth(imgWidth);
+    setImageHeight(imgWidth * (825 / 640));
+  }, [currentWidth]);
+
   return (
     <>
       <div className="introduction-info" style={{ zIndex: 2 }}>
@@ -60,11 +95,21 @@ export function IntroductionInfo({ isMobile }: { isMobile: boolean }) {
           <Connections />
         </div>
       </div>
-      <img
-        src="/images/me.webp"
-        alt="Me"
-        className="img-fluid introduction-img"
-      />
+      {imageLoaded ? (
+        <img
+          alt="Me"
+          src="/images/me.webp"
+          className="img-fluid introduction-img"
+        />
+      ) : (
+        <Blurhash
+          hash="|WJlHkNZ-,ROadbwbct7s.G1%LRiWUacNGRjRiWCtp-pRQtStQaeo3WXozIVjdItNItRnhRkt8WAnMRiR.%La#t5ofRkn$j;WqWBRjaeWDjtt7t7WAa$V@WBWAWDWBWAR*s-bIofWBjYW=t7oIfRjYj]ozWYkCbHR*aya#"
+          className={currentWidth > 1279 ? "introduction-img" : ""}
+          width={imageWidth}
+          height={imageHeight}
+          punch={1}
+        />
+      )}
     </>
   );
 }

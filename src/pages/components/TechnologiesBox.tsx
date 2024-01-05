@@ -1,6 +1,6 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
+
 import React, { useEffect, useState } from "react";
 
 interface BoxProps {

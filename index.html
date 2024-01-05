@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/images/me.webp"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="script"
+      href="data:application/octet-stream;base64,aW1wb3J0ICJhb3MvZGlzdC9hb3MuY3NzIjsKaW1wb3J0ICJib290c3RyYXAvZGlzdC9jc3MvYm9vdHN0cmFwLm1pbi5jc3MiOwoKaW1wb3J0IHsgdXNlRWZmZWN0LCB1c2VMYXlvdXRFZmZlY3QsIHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyBCbHVyaGFzaCB9IGZyb20gInJlYWN0LWJsdXJoYXNoIjsKCmltcG9ydCBDb25uZWN0aW9ucyBmcm9tICIuL2NvbXBvbmVudHMvQ29ubmVjdGlvbnMiOwppbXBvcnQgeyBMaWdodEJsdWVCb3ggfSBmcm9tICIuL2NvbXBvbmVudHMvTGlnaHRCbHVlQm94IjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEludHJvZHVjdGlvbigpIHsKICBjb25zdCBbaXNNb2JpbGUsIHNldElzTW9iaWxlXSA9IHVzZVN0YXRlKHdpbmRvdy5pbm5lcldpZHRoIDwgMTI4MCk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBjb25zdCBoYW5kbGVSZXNpemUgPSAoKSA9PiB7CiAgICAgIHNldElzTW9iaWxlKHdpbmRvdy5pbm5lcldpZHRoIDwgMTI4MCk7CiAgICB9OwoKICAgIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJyZXNpemUiLCBoYW5kbGVSZXNpemUpOwoKICAgIHJldHVybiAoKSA9PiB7CiAgICAgIHdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCJyZXNpemUiLCBoYW5kbGVSZXNpemUpOwogICAgfTsKICB9LCBbXSk7CgogIHJldHVybiAoCiAgICA8PgogICAgICA8ZGl2CiAgICAgICAgaWQ9ImludHJvZHVjdGlvbiIKICAgICAgICBjbGFzc05hbWU9InZzdGFjayBnYXAtMyBkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlciIKICAgICAgPgogICAgICAgIHtpc01vYmlsZSA/IG51bGwgOiA8TGlnaHRCbHVlQm94IHBvc2l0aW9uPSJsZWZ0IiAvPn0KICAgICAgICA8SW50cm9kdWN0aW9uSW5mbyBpc01vYmlsZT17aXNNb2JpbGV9IC8+CiAgICAgIDwvZGl2PgogICAgPC8+CiAgKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIEludHJvZHVjdGlvbkluZm8oeyBpc01vYmlsZSB9OiB7IGlzTW9iaWxlOiBib29sZWFuIH0pIHsKICBjb25zdCBbaW1hZ2VMb2FkZWQsIHNldEltYWdlTG9hZGVkXSA9IHVzZVN0YXRlKGZhbHNlKTsKICBjb25zdCBbaW1hZ2VXaWR0aCwgc2V0SW1hZ2VXaWR0aF0gPSB1c2VTdGF0ZSg0NTApOwogIGNvbnN0IFtpbWFnZUhlaWdodCwgc2V0SW1hZ2VIZWlnaHRdID0gdXNlU3RhdGUoNTgwKTsKICBjb25zdCBbY3VycmVudFdpZHRoLCBzZXRDdXJyZW50V2lkdGhdID0gdXNlU3RhdGUod2luZG93LmlubmVyV2lkdGgpOwoKICB1c2VMYXlvdXRFZmZlY3QoKCkgPT4gewogICAgY29uc3QgaW1nID0gbmV3IEltYWdlKCk7CiAgICBpbWcuc3JjID0gIi9pbWFnZXMvbWUud2VicCI7CiAgICBpbWcub25sb2FkID0gKCkgPT4gewogICAgICBzZXRJbWFnZUxvYWRlZCh0cnVlKTsKICAgIH07CiAgfSwgW10pOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgY29uc3QgaGFuZGxlUmVzaXplID0gKCkgPT4gewogICAgICBzZXRDdXJyZW50V2lkdGgod2luZG93LmlubmVyV2lkdGgpOwogICAgfTsKCiAgICB3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigicmVzaXplIiwgaGFuZGxlUmVzaXplKTsKCiAgICByZXR1cm4gKCkgPT4gewogICAgICB3aW5kb3cucmVtb3ZlRXZlbnRMaXN0ZW5lcigicmVzaXplIiwgaGFuZGxlUmVzaXplKTsKICAgIH07CiAgfSwgW3dpbmRvdy5pbm5lcldpZHRoXSk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBsZXQgaW1nV2lkdGggPSA0NTA7CiAgICBpZiAoY3VycmVudFdpZHRoIDwgMTUzNykgaW1nV2lkdGggPSA0MDA7CiAgICBpZiAoY3VycmVudFdpZHRoIDwgMTI4MCkgaW1nV2lkdGggPSBjdXJyZW50V2lkdGggLyAyOwogICAgaWYgKGN1cnJlbnRXaWR0aCA8IDcyMSkgaW1nV2lkdGggPSBjdXJyZW50V2lkdGggKiAwLjc1OwogICAgc2V0SW1hZ2VXaWR0aChpbWdXaWR0aCk7CiAgICBzZXRJbWFnZUhlaWdodChpbWdXaWR0aCAqICg4MjUgLyA2NDApKTsKICB9LCBbY3VycmVudFdpZHRoXSk7CgogIHJldHVybiAoCiAgICA8PgogICAgICA8ZGl2IGNsYXNzTmFtZT0iaW50cm9kdWN0aW9uLWluZm8iIHN0eWxlPXt7IHpJbmRleDogMiB9fT4KICAgICAgICA8ZGl2PgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0idGhpcy1pcyI+VGhpcyBpczwvaDI+CiAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJoaWdobGlnaHQgdGl0bGUiIGRhdGEtYW9zLWR1cmF0aW9uPSIxMDAwIj4KICAgICAgICAgICAgQmVubnkgTmd1eWVuCiAgICAgICAgICA8L2gxPgogICAgICAgICAgPGRpdj4KICAgICAgICAgICAgPHA+CiAgICAgICAgICAgICAgQSA8c3BhbiBzdHlsZT17eyBmb250V2VpZ2h0OiAiYm9sZCIgfX0+RnJvbnQtZW5kIGRldmVsb3Blcjwvc3Bhbj57IiAifQogICAgICAgICAgICAgIHdobyBlbmpveXMgYW5kIHdhbnRzIHRvIGtub3cgbW9yZSBhYm91dCBwcm9ncmFtbWluZy4KICAgICAgICAgICAgPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdgogICAgICAgICAgc3R5bGU9e3sKICAgICAgICAgICAgdHJhbnNmb3JtOiAidHJhbnNsYXRlKC0xdncpIiwKICAgICAgICAgICAgZGlzcGxheTogaXNNb2JpbGUgPyAiZmxleCIgOiAic3RhdGljIiwKICAgICAgICAgICAganVzdGlmeUNvbnRlbnQ6IGlzTW9iaWxlID8gImNlbnRlciIgOiAiIiwKICAgICAgICAgIH19CiAgICAgICAgPgogICAgICAgICAgPENvbm5lY3Rpb25zIC8+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICB7aW1hZ2VMb2FkZWQgPyAoCiAgICAgICAgPGltZwogICAgICAgICAgYWx0PSJNZSIKICAgICAgICAgIHNyYz0iL2ltYWdlcy9tZS53ZWJwIgogICAgICAgICAgY2xhc3NOYW1lPSJpbWctZmx1aWQgaW50cm9kdWN0aW9uLWltZyIKICAgICAgICAvPgogICAgICApIDogKAogICAgICAgIDxCbHVyaGFzaAogICAgICAgICAgaGFzaD0ifFdKbEhrTlotLFJPYWRid2JjdDdzLkcxJUxSaVdVYWNOR1JqUmlXQ3RwLXBSUXRTdFFhZW8zV1hveklWamRJdE5JdFJuaFJrdDhXQW5NUmlSLiVMYSN0NW9mUmtuJGo7V3FXQlJqYWVXRGp0dDd0N1dBYSRWQFdCV0FXRFdCV0FSKnMtYklvZldCallXPXQ3b0lmUmpZal1veldZa0NiSFIqYXlhIyIKICAgICAgICAgIGNsYXNzTmFtZT17Y3VycmVudFdpZHRoID4gMTI3OSA/ICJpbnRyb2R1Y3Rpb24taW1nIiA6ICIifQogICAgICAgICAgd2lkdGg9e2ltYWdlV2lkdGh9CiAgICAgICAgICBoZWlnaHQ9e2ltYWdlSGVpZ2h0fQogICAgICAgICAgcHVuY2g9ezF9CiAgICAgICAgLz4KICAgICAgKX0KICAgIDwvPgogICk7Cn0K"
+    />
+    
     <link rel="icon" type="image/png" href="/icon/webIcon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -36,24 +55,10 @@
     <meta name="twitter:domain" content="bennynguyen.dev" />
     <meta name="twitter:url" content="https://bennynguyen.dev" />
     <title>Benny Nguyen</title>
-    <script type="module" crossorigin src="/assets/index-f53c78e8.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/@popperjs-f3e809ff.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-7b818ef1.js">
-    <link rel="modulepreload" crossorigin href="/assets/scheduler-765c72db.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-dom-6ef02576.js">
-    <link rel="modulepreload" crossorigin href="/assets/aos-a754ab40.js">
-    <link rel="modulepreload" crossorigin href="/assets/bootstrap-aaaee703.js">
-    <link rel="modulepreload" crossorigin href="/assets/prop-types-8d262492.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-is-e8e5dbb3.js">
-    <link rel="modulepreload" crossorigin href="/assets/hoist-non-react-statics-6cec555a.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-async-script-3d7d7f08.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-google-recaptcha-31b3ea04.js">
-    <link rel="stylesheet" href="/assets/aos-73168167.css">
-    <link rel="stylesheet" href="/assets/bootstrap-7157fbd3.css">
-    <link rel="stylesheet" href="/assets/index-e56002ab.css">
+    <script async type="module" crossorigin src="/assets/index-0016584f.js"></script>
+    <link rel="stylesheet" href="/assets/index-ac33fe9a.css">
   </head>
   <body>
     <div id="root"></div>
-    
   </body>
 </html>

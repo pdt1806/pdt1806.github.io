@@ -1,18 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Connections = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1280);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [window.innerWidth]);
+
   return (
     <div
       className="d-flex"
       style={{
+        marginTop: "4vh",
         width: "70%",
         maxWidth: "320px",
         minWidth: isMobile ? "240px" : "277px",
         justifyContent: "space-between",
       }}
     >
-      <a href="https://github.com/pdt1806" target="_blank">
+      <a
+        href="https://github.com/pdt1806"
+        target="_blank"
+        className="connections-icon-a"
+      >
         <img
           loading="lazy"
           style={{ filter: "invert(1)" }}
@@ -22,7 +40,11 @@ const Connections = () => {
           title="GitHub"
         />
       </a>
-      <a href="https://instagram.com/benny_ng08" target="_blank">
+      <a
+        href="https://instagram.com/benny_ng08"
+        target="_blank"
+        className="connections-icon-a"
+      >
         <img
           loading="lazy"
           style={{ filter: "invert(1)" }}
@@ -32,7 +54,11 @@ const Connections = () => {
           title="Instagram"
         />
       </a>
-      <a href="https://facebook.com/pdteggman" target="_blank">
+      <a
+        href="https://facebook.com/pdteggman"
+        target="_blank"
+        className="connections-icon-a"
+      >
         <img
           loading="lazy"
           style={{ filter: "invert(1)" }}
@@ -42,7 +68,11 @@ const Connections = () => {
           title="Facebook"
         />
       </a>
-      <a href="https://x.com/pdteggman" target="_blank">
+      <a
+        href="https://x.com/pdteggman"
+        target="_blank"
+        className="connections-icon-a"
+      >
         <img
           loading="lazy"
           style={{ filter: "invert(1)" }}

@@ -127,8 +127,8 @@ section {
 }
 
 @media only screen and (max-width: 720px) {
-  .connections-icon {
-    margin: 4vh 2vw 0 2vw !important;
+  .connections-icon-a {
+    margin: 0 2vw 0 2vw !important;
   }
 }
 
@@ -290,9 +290,12 @@ section {
 }
 
 .connections-icon {
-  margin: 4vh 1vw 0 1vw;
   width: 40px !important;
   height: 40px !important;
+}
+
+.connections-icon-a {
+  margin: 0 1vw 0 1vw;
 }
 
 .tech-icons-container {

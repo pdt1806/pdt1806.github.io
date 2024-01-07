@@ -80,10 +80,11 @@ export default function WorksBox(props: BoxProps) {
                 loading="lazy"
                 src="/icon/tech/github.svg"
                 title="Source Code"
-                className="tech-icon"
                 style={{
                   filter: "invert(1)",
-                  marginRight: "15px",
+                  margin: "0 15px 0 0",
+                  height: "32px",
+                  width: "32px",
                 }}
                 alt="github"
               />

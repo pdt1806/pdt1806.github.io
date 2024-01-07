@@ -3,56 +3,61 @@ import { useEffect, useState } from "react";
 import WorksBox from "./WorksBox";
 
 const projects = [
-  <WorksBox
-    title="Discord Status as Image"
-    description="Turn your Discord status into a simple, eye-catching image for easy sharing and display."
-    image="/images/works/disi-logo.webp"
-    link="https://disi.bennynguyen.dev"
-    source="https://github.com/pdt1806/discord-status-as-image"
-  ></WorksBox>,
-  <WorksBox
-    title="ERG Wordle"
-    description="A remake of the popular game Wordle using pure HTML5, CSS and JavaScript."
-    image="/images/works/wordle-icon.webp"
-    link="https://wordle.bennynguyen.dev"
-    source="https://github.com/pdt1806/erg-wordle"
-  ></WorksBox>,
-  <WorksBox
-    title="AutoDisconnect"
-    description="A simple Minecraft mod that automatically disconnects players when they are in low health."
-    image="/images/works/autodisconnect-logo.webp"
-    link="https://github.com/pdt1806/AutoDisconnect/releases/"
-    source="https://github.com/pdt1806/AutoDisconnect"
-  ></WorksBox>,
-  <WorksBox
-    title="ERG Rock Paper Scissors"
-    description="A Rock Paper Scissors game created using Phaser, a JavaScript framework."
-    image="/images/works/ropas-title.webp"
-    link="https://ropas.bennynguyen.dev"
-    source="https://github.com/pdt1806/erg-rock-paper-scissors"
-  ></WorksBox>,
-  <WorksBox
-    title="Emochoice Web Store"
-    description="The web store of Emochoice, a print-on-demand store in Canada. Built with React, TypeScript and Mantine."
-    image="/images/works/emochoice.svg"
-    link="https://emochoice.ca"
-    source="https://github.com/tobycm/emochoice"
-    owner={{ name: "tobycm", link: "https://github.com/tobycm" }}
-  ></WorksBox>,
-  // <WorksBox
-  //   title="Pocket Hanzi Dictionary"
-  //   description="A simple extension that makes learning Chinese characters easier."
-  //   image="/images/works/pocket-hanzi-dictionary-icon.webp"
-  //   link="https://github.com/pdt1806/pocket-hanzi-dictionary/releases/"
-  //   source="https://github.com/pdt1806/pocket-hanzi-dictionary"
-  // ></WorksBox>,
-  // <WorksBox
-  //   title="Legacy personal website"
-  //   description="Legacy personal website written in pure HTML5, CSS, and JavaScript."
-  //   image="/images/works/legacy-personal-website.webp"
-  //   link="https://legacy.bennynguyen.dev"
-  //   source="https://github.com/BNMP-Inc/legacy-personal-website"
-  // ></WorksBox>,
+  {
+    title: "Discord Status as Image",
+    description:
+      "Turn your Discord status into a simple, eye-catching image for easy sharing and display.",
+    image: "/images/works/disi-logo.webp",
+    link: "https://disi.bennynguyen.dev",
+    source: "https://github.com/pdt1806/discord-status-as-image",
+  },
+  {
+    title: "ERG Wordle",
+    description:
+      "A remake of the popular game Wordle using pure HTML5, CSS and JavaScript.",
+    image: "/images/works/wordle-icon.webp",
+    link: "https://wordle.bennynguyen.dev",
+    source: "https://github.com/pdt1806/erg-wordle",
+  },
+  {
+    title: "AutoDisconnect",
+    description:
+      "A simple Minecraft mod that automatically disconnects players when they are in low health.",
+    image: "/images/works/autodisconnect-logo.webp",
+    link: "https://github.com/pdt1806/AutoDisconnect/releases/",
+    source: "https://github.com/pdt1806/AutoDisconnect",
+  },
+  {
+    title: "ERG Rock Paper Scissors",
+    description:
+      "A Rock Paper Scissors game created using Phaser, a JavaScript framework.",
+    image: "/images/works/ropas-title.webp",
+    link: "https://ropas.bennynguyen.dev",
+    source: "https://github.com/pdt1806/erg-rock-paper-scissors",
+  },
+  {
+    title: "Emochoice Web Store",
+    description:
+      "The web store of Emochoice, a print-on-demand store in Canada. Built with React, TypeScript and Mantine.",
+    image: "/images/works/emochoice.svg",
+    link: "https://emochoice.ca",
+    source: "https://github.com/tobycm/emochoice",
+    owner: { name: "tobycm", link: "https://github.com/tobycm" },
+  },
+  // {
+  //   title: "Pocket Hanzi Dictionary",
+  //   description: "A simple extension that makes learning Chinese characters easier.",
+  //   image: "/images/works/pocket-hanzi-dictionary-icon.webp",
+  //   link: "https://github.com/pdt1806/pocket-hanzi-dictionary/releases/",
+  //   source: "https://github.com/pdt1806/pocket-hanzi-dictionary"
+  // },
+  // {
+  //   title: "Legacy personal website",
+  //   description: "Legacy personal website written in pure HTML5, CSS, and JavaScript.",
+  //   image: "/images/works/legacy-personal-website.webp",
+  //   link: "https://legacy.bennynguyen.dev",
+  //   source: "https://github.com/BNMP-Inc/legacy-personal-website"
+  // },
 ];
 
 const WorksContainer = () => {
@@ -113,7 +118,14 @@ const WorksContainer = () => {
               transition: "opacity 0.3s ease-in",
             }}
           >
-            {project}
+            <WorksBox
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              link={project.link}
+              source={project.source}
+              owner={project.owner}
+            />
           </div>
         );
       })}
@@ -146,7 +158,14 @@ const WorksContainer = () => {
             id="worksbox"
             data-aos="zoom-in"
           >
-            {project}
+            <WorksBox
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              link={project.link}
+              source={project.source}
+              owner={project.owner}
+            />
           </div>
         );
       })}

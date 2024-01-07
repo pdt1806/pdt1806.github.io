@@ -20,6 +20,21 @@ const Education = () => {
     };
   }, []);
 
+  const schoolsList = [
+    {
+      time: "11/2022 - Now",
+      title: "Antelope High School, CA",
+    },
+    {
+      time: "9/2021 - 10/2022",
+      title: "Tran Quoc Toan 1 Secondary School, Vietnam",
+    },
+    {
+      time: "8/2014 - 5/2021",
+      title: "The Asian International School, Vietnam",
+    },
+  ];
+
   return (
     <>
       <div className="vstack gap-2">
@@ -45,24 +60,13 @@ const Education = () => {
             Education
           </h1>
           <div className="school-box-section">
-            <div>
+            {schoolsList.map((school) => (
               <SchoolBox
-                time="11/2022 - Now"
-                title="Antelope High School, CA"
+                key={school.title}
+                time={school.time}
+                title={school.title}
               />
-            </div>
-            <div>
-              <SchoolBox
-                time="9/2021 - 10/2022"
-                title="Tran Quoc Toan 1 Middle School, Vietnam"
-              />
-            </div>
-            <div>
-              <SchoolBox
-                time="8/2014 - 5/2021"
-                title="The Asian International School, Vietnam"
-              />
-            </div>
+            ))}
           </div>
         </div>
       </div>

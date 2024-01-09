@@ -210,8 +210,8 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
           }}
         >
           <p style={{ fontWeight: "bold" }}>Contact me</p>
-          <a href="mailto:contact@bennynguyen.dev">
-            <p>contact@bennynguyen.dev</p>
+          <a href="mailto:me@bennynguyen.dev">
+            <p>me@bennynguyen.dev</p>
           </a>
           <br />
           <p style={{ fontWeight: "bold" }}>Based in</p>

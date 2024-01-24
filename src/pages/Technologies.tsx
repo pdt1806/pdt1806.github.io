@@ -79,6 +79,13 @@ export function TechnologiesInfo({ isMobile }: { isMobile?: boolean }) {
           />
           <img
             loading="lazy"
+            src="/icon/tech/preact.svg"
+            className="tech-icon"
+            alt="Preact"
+            title="Preact"
+          />
+          <img
+            loading="lazy"
             src="/icon/tech/vite.svg"
             className="tech-icon"
             alt="Vite"

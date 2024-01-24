@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Emochoice Web Store",
     description:
-      "The web store of Emochoice, a print-on-demand store in Canada. Built with React and Mantine.",
+      "The web store of Emochoice, a print-on-demand store in Canada. Built with Preact and Mantine.",
     image: "/images/works/emochoice.svg",
     link: "https://emochoice.ca",
     source: "https://github.com/tobycm/emochoice",

@@ -1,19 +1,33 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import { useEffect, useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
 import SchoolBox from "./components/SchoolBox";
 
-const Education = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+const Education: React.FC = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1280);
+  const outerDivRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1280);
     };
 
-    window.addEventListener("resize", handleResize);
+    const updateBackgroundHeight = () => {
+      if (outerDivRef.current) {
+        const height = outerDivRef.current.offsetHeight;
+        document.documentElement.style.setProperty(
+          "--bg-height-education",
+          `${height}px`
+        );
+      }
+    };
+
+    window.addEventListener("resize", () => {
+      handleResize();
+      updateBackgroundHeight();
+    });
+
+    updateBackgroundHeight();
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -37,7 +51,7 @@ const Education = () => {
 
   return (
     <>
-      <div className="vstack gap-2">
+      <div className="vstack gap-2" ref={outerDivRef}>
         {!isMobile && (
           <img
             loading="lazy"

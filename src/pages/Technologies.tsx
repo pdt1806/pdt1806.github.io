@@ -1,19 +1,36 @@
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import TechnologiesBox from "./components/TechnologiesBox";
 
 export default function Technologies() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
 
+  const outerDivRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1280);
     };
 
-    window.addEventListener("resize", handleResize);
+    const updateBackgroundHeight = () => {
+      if (outerDivRef.current) {
+        const height = outerDivRef.current.offsetHeight;
+        document.documentElement.style.setProperty(
+          "--bg-height-tech",
+          `${height}px`
+        );
+      }
+    };
+
+    window.addEventListener("resize", () => {
+      handleResize();
+      updateBackgroundHeight();
+    });
+
+    updateBackgroundHeight();
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -29,27 +46,31 @@ export default function Technologies() {
           width: isMobile ? "100%" : "",
           flexDirection: isMobile ? "column" : "row",
         }}
+        ref={outerDivRef}
       >
+        <img
+          loading="lazy"
+          src="/images/components/technologies-bg-1.webp"
+          className="background-component"
+          style={{
+            left: 0,
+            height: isMobile ? "var(--bg-height-tech)" : "",
+            width: isMobile ? "100vw" : "",
+            maxWidth: isMobile ? "480px" : "none",
+          }}
+          alt="technologies-bg-1"
+        />
         {!isMobile && (
-          <>
-            <img
-              loading="lazy"
-              src="/images/components/technologies-bg-1.webp"
-              className="background-component"
-              style={{ left: 0 }}
-              alt="technologies-bg-1"
-            />
-            <img
-              loading="lazy"
-              src="/images/components/technologies-bg-2.webp"
-              className="background-component"
-              style={{ right: 0 }}
-              alt="technologies-bg-2"
-            />
-          </>
+          <img
+            loading="lazy"
+            src="/images/components/technologies-bg-2.webp"
+            className="background-component"
+            style={{ right: 0 }}
+            alt="technologies-bg-2"
+          />
         )}
         <h1
-          className="section-title"
+          className={`section-title ${isMobile ? "pt-5" : ""}`}
           style={{
             marginLeft: !isMobile ? "5rem" : "auto",
             marginRight: "auto",

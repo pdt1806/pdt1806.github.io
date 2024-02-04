@@ -34,23 +34,32 @@ export default function WorksBox(props: BoxProps) {
       className="d-flex justify-content-evenly align-items-center"
       style={{
         flexDirection: isMobile ? "column" : "row",
+        width: "100%",
       }}
     >
-      <a href={props.link} target="_blank">
-        <img
-          loading="lazy"
-          src={props.image}
-          alt={props.title}
-          style={{
-            borderRadius: "20px",
-            width: !isMobile ? "auto" : "50%",
-            maxWidth: isMobile ? "400px" : "none",
-            marginBottom: !isMobile ? "0px" : "20px",
-            height: !isMobile ? "" : "auto",
-            minHeight: "150px",
-          }}
-        />
-      </a>
+      <div
+        style={{
+          width: isMobile ? "auto" : "40%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <a href={props.link} target="_blank">
+          <img
+            loading="lazy"
+            src={props.image}
+            alt={props.title}
+            style={{
+              borderRadius: "20px",
+              width: !isMobile ? "auto" : "50%",
+              maxWidth: isMobile ? "400px" : "none",
+              marginBottom: !isMobile ? "0px" : "20px",
+              height: !isMobile ? "" : "auto",
+              minHeight: "150px",
+            }}
+          />
+        </a>
+      </div>
       <div
         style={{
           width: isMobile ? "90%" : "60%",
@@ -70,8 +79,8 @@ export default function WorksBox(props: BoxProps) {
           style={{
             marginTop: "20px",
             width: "min-content",
-            marginLeft: isMobile ? "auto" : "",
-            marginRight: isMobile ? "auto" : "",
+            marginLeft: isMobile ? "auto" : "0",
+            marginRight: isMobile ? "auto" : "0",
           }}
         >
           {props.source !== "" && (

@@ -39,7 +39,7 @@ export default function WorksBox(props: BoxProps) {
     >
       <div
         style={{
-          width: isMobile ? "auto" : "40%",
+          width: isMobile ? "auto" : "35%",
           display: "flex",
           justifyContent: "center",
         }}
@@ -62,7 +62,7 @@ export default function WorksBox(props: BoxProps) {
       </div>
       <div
         style={{
-          width: isMobile ? "90%" : "60%",
+          width: isMobile ? "90%" : "65%",
           marginBottom: isMobile ? "10vh" : "0",
         }}
       >

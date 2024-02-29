@@ -1,0 +1,14 @@
+.works-container {
+  background: #00000075;
+  width: 100%;
+  padding: 12vh 0 12vh 0;
+}
+#worksbox img {
+  height: 300px;
+  width: auto;
+}
+.works-container img {
+  @media screen and (max-width: 1600px) {
+    transform: scale(0.8);
+  }
+}

@@ -1,9 +1,8 @@
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import { useEffect, useRef, useState } from "react";
 
-import ValueCard from "./components/ValueCard";
+import ValueCard from "../../components/ValueCard";
 
 export default function MyValues() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -39,9 +38,13 @@ export default function MyValues() {
 
   return (
     <div
-      className="vstack gap-3 d-flex h-100"
+      id="my-values"
       style={{
         justifyContent: isMobile ? "" : "center",
+        display: "flex",
+        flexDirection: "column",
+        gap: "3rem",
+        height: "100%",
       }}
       ref={outerDivRef}
     >
@@ -58,8 +61,9 @@ export default function MyValues() {
         }}
       />
       <h1
-        className={`section-title ${isMobile ? "pt-5" : ""}`}
+        className="section-title"
         style={{
+          paddingTop: isMobile ? "5vh" : "",
           position: !isMobile ? "absolute" : "static",
           right: !isMobile ? "0" : "",
           marginRight: !isMobile ? "5rem" : "auto",
@@ -71,17 +75,20 @@ export default function MyValues() {
         My Values
       </h1>
       <div
-        className="d-flex flex-column"
-        style={{ alignItems: isMobile ? "center" : "" }}
+        style={{
+          alignItems: isMobile ? "center" : "",
+          display: "flex",
+          flexDirection: "column",
+        }}
       >
-        <div className="d-flex">
+        <div style={{ display: "flex" }}>
           <ValueCard
             title="Determination"
             img="images/components/value-1.webp"
           />
           <ValueCard title="Thoughtful" img="images/components/value-2.webp" />
         </div>
-        <div className="d-flex">
+        <div style={{ display: "flex" }}>
           <ValueCard
             title="Collaborative"
             img="images/components/value-3.webp"

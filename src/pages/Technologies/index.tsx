@@ -1,9 +1,10 @@
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./index.css";
 
 import { useEffect, useRef, useState } from "react";
 
-import TechnologiesBox from "./components/TechnologiesBox";
+import TechnologiesBox from "../../components/TechnologiesBox";
 
 export default function Technologies() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -40,13 +41,16 @@ export default function Technologies() {
   return (
     <div>
       <div
-        className="vstack gap-3 d-flex justify-content-center"
         style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "3rem",
           height: !isMobile ? "100vh" : "",
           width: isMobile ? "100%" : "",
           flexDirection: isMobile ? "column" : "row",
         }}
         ref={outerDivRef}
+        id="technologies"
       >
         <img
           loading="lazy"
@@ -70,8 +74,9 @@ export default function Technologies() {
           />
         )}
         <h1
-          className={`section-title ${isMobile ? "pt-5" : ""}`}
+          className="section-title"
           style={{
+            paddingTop: isMobile ? "5vh" : "",
             marginLeft: !isMobile ? "5rem" : "auto",
             marginRight: "auto",
             marginBottom: isMobile ? "3rem" : "auto",

@@ -1,0 +1,74 @@
+.non-message {
+  height: 6vh;
+  min-height: 50px;
+}
+
+.message {
+  height: 16vh;
+  margin-bottom: 2vh !important;
+  overflow-y: auto;
+}
+.email-sent {
+  font-size: 20px !important;
+  margin-bottom: 0 !important;
+
+  @media screen and (max-width: 500px) {
+    font-size: 15px !important;
+  }
+
+  @media screen and (max-width: 390px) {
+    font-size: 13px !important;
+  }
+}
+
+#name,
+#email,
+#message {
+  border-radius: 12px;
+  border: 2px solid #00f0ff;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  margin: 3vh 0 0 0;
+  width: 25vw;
+  text-align: start;
+  transition: border-color 0.2s ease-in-out;
+  @media only screen and (max-width: 1279px) {
+    width: 80vw !important;
+    max-width: 500px !important;
+    min-width: 300px !important;
+  }
+}
+
+#name:focus,
+#email:focus,
+#message:focus {
+  border: 2px solid #ffffff;
+}
+
+#submit-button {
+  width: 4vw;
+  min-width: 60px;
+  padding: 5px;
+  margin: 0 10px 0 0;
+  border-radius: 50px;
+  background: #00f0ff;
+  color: black;
+  outline: none;
+  border: none;
+}
+
+#submit-button:hover {
+  background-color: #00d1de;
+}
+
+#submit-button:active {
+  background-color: #00c1cc;
+}
+
+#contactme a {
+  color: white;
+  text-decoration: none;
+}

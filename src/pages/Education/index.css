@@ -1,0 +1,23 @@
+.school-box-section {
+  @media screen and (max-width: 1279px) {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+#education {
+  @media screen and (max-width: 1279px) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: max-content !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("/images/components/aboutme-bg-2.webp") no-repeat center/cover !important;
+  }
+}

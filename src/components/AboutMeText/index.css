@@ -1,0 +1,8 @@
+.aboutme-text {
+  width: calc(80% / 3);
+  text-align: center;
+  @media screen and (max-width: 1279px) {
+    width: 80% !important;
+    margin-bottom: 50px !important;
+  }
+}

@@ -1,0 +1,33 @@
+.technologies-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  position: absolute;
+  right: 55vh;
+  @media screen and (max-width: 1279px) {
+    position: static !important;
+    width: 100% !important;
+    height: max-content !important;
+  }
+}
+.tech-icon {
+  margin: 3px 6px 10px 6px;
+  width: 32px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+}
+
+.tech-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+#technologies {
+  @media screen and (max-width: 1279px) {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./index.css";
 
 const Connections = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -17,8 +18,8 @@ const Connections = () => {
 
   return (
     <div
-      className="d-flex"
       style={{
+        display: "flex",
         marginTop: "4vh",
         width: "70%",
         maxWidth: "320px",

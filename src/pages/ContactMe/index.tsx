@@ -1,11 +1,12 @@
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./index.css";
 
 import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import Connections from "./components/Connections";
-import { LightBlueBox } from "./components/LightBlueBox";
+import Connections from "../../components/Connections";
+import { LightBlueBox } from "../../components/LightBlueBox";
 
 export default function ContactMe() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -30,7 +31,7 @@ export default function ContactMe() {
 
   return (
     <>
-      <div id="contact-me" className="vstack gap-3 h-100">
+      <div id="contactme" className="vstack gap-3 h-100">
         <h1
           className="section-title z-0"
           style={{
@@ -49,11 +50,10 @@ export default function ContactMe() {
             <p style={{ fontWeight: "bold" }}>Social Links</p>
             <Connections />
             <iframe
-              className="mt-5"
               src="https://disi.bennynguyen.dev/smallcard?id=458550515614351360&bg=ffffff"
               name="disi-small-card"
               title="Discord"
-              style={{ borderRadius: "20px" }}
+              style={{ borderRadius: "20px", marginTop: "5vh" }}
               height="100px"
               width="300px"
             ></iframe>
@@ -152,10 +152,17 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
   };
 
   return (
-    <div className="h-100 d-flex align-items-center">
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        height: "100%",
+      }}
+    >
       <div
-        className="d-flex align-items-center"
         style={{
+          display: "flex",
+          alignItems: "center",
           width: !isMobile ? "65vw" : "100%",
           justifyContent: !isMobile ? "space-between" : "none",
           flexDirection: !isMobile ? "row" : "column",
@@ -163,8 +170,11 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
         }}
       >
         <form
-          className="d-flex flex-column"
-          style={{ marginBottom: isMobile ? "3rem" : "0" }}
+          style={{
+            marginBottom: isMobile ? "3rem" : "0",
+            display: "flex",
+            flexDirection: "column",
+          }}
           onSubmit={handleSubmit}
         >
           <input
@@ -196,8 +206,11 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
             id="captcha"
           />
           <div
-            className="d-flex align-items-center"
-            style={{ marginTop: "2vh" }}
+            style={{
+              marginTop: "2vh",
+              display: "flex",
+              alignItems: "center",
+            }}
           >
             <input type="submit" id="submit-button" value="Send"></input>
             {emailSent !== "" && <p className="email-sent">{emailSent}</p>}
@@ -233,10 +246,9 @@ export function ContactMeInput({ isMobile }: { isMobile: boolean }) {
               target="_blank"
             >
               <img
-                style={{ borderRadius: "20px" }}
+                style={{ borderRadius: "20px", marginTop: "5vh" }}
                 height="100px"
                 width="300px"
-                className="mt-5"
                 alt="disi-small-card"
                 src="https://disi-api.bennynguyen.dev/smallcard/458550515614351360?bg=FFFFFF"
               ></img>

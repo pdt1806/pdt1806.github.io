@@ -1,6 +1,7 @@
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import WorksBox from "./WorksBox";
+import WorksBox from "../WorksBox";
+import "./index.css";
 
 const projects = [
   {
@@ -79,12 +80,25 @@ const WorksContainer = () => {
 
   return !isMobile ? (
     <div
-      className="works-container d-flex justify-content-between align-items-center w-100 h-50"
-      style={{ zIndex: "2", userSelect: "none" }}
+      className="works-container"
+      style={{
+        zIndex: "2",
+        userSelect: "none",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%",
+        height: "50%",
+      }}
     >
       <div
-        style={{ height: "100%", width: "150px" }}
-        className="d-flex justify-content-center align-items-center"
+        style={{
+          height: "100%",
+          width: "150px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
         onClick={() =>
           setIndex((index - 1 + projects.length) % projects.length)
         }
@@ -106,9 +120,13 @@ const WorksContainer = () => {
         return (
           <div
             key={i}
-            className="d-flex justify-content-evenly align-items-center w-75 h-100"
             id="worksbox"
             style={{
+              width: "75%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "evenly",
+              alignItems: "center",
               position: "absolute",
               left: "50%",
               transform: "translateX(-50%)",
@@ -130,8 +148,13 @@ const WorksContainer = () => {
         );
       })}
       <div
-        style={{ height: "100%", width: "150px" }}
-        className="d-flex justify-content-center align-items-center"
+        style={{
+          height: "100%",
+          width: "150px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
         onClick={() => setIndex((index + 1) % projects.length)}
       >
         <img
@@ -154,9 +177,15 @@ const WorksContainer = () => {
         return (
           <div
             key={i}
-            className="d-flex justify-content-center align-items-center w-100 h-100"
             id="worksbox"
             data-aos="zoom-in"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+            }}
           >
             <WorksBox
               title={project.title}

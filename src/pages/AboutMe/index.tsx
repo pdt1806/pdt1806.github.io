@@ -1,9 +1,10 @@
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./index.css";
 
 import { useEffect, useState } from "react";
 
-import AboutMeText from "./components/AboutMeText";
+import AboutMeText from "../../components/AboutMeText";
 
 export default function AboutMe() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -21,10 +22,11 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <>
+    <div id="aboutme">
       <h1
-        className="section-title pt-5"
+        className="section-title"
         style={{
+          paddingTop: "5vh",
           position: !isMobile ? "absolute" : "static",
           left: !isMobile ? "50%" : "auto",
           right: !isMobile ? "" : "auto",
@@ -34,8 +36,19 @@ export default function AboutMe() {
       >
         More about me
       </h1>
-      <div className="vstack d-flex align-items-center justify-content-center h-100">
-        <div className="d-flex">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
           {!isMobile && (
             <>
               <img
@@ -61,15 +74,19 @@ export default function AboutMe() {
         </div>
         <AboutMeInfo isMobile={isMobile} />
       </div>
-    </>
+    </div>
   );
 }
 
 export function AboutMeInfo({ isMobile }: { isMobile: boolean }) {
   return (
     <div
-      className="d-flex justify-content-around align-items-center w-100 h-100"
       style={{
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
+        width: "100%",
+        height: "100%",
         position: isMobile ? "static" : "absolute",
         flexDirection: isMobile ? "column" : "row",
       }}

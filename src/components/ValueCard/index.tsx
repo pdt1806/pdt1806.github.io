@@ -1,4 +1,5 @@
 import "aos/dist/aos.css";
+import "./index.css";
 
 interface ValueCardProps {
   title: string;
@@ -24,13 +25,18 @@ const ValueCard = (props: ValueCardProps) => {
   return (
     <div
       id="value-card"
-      className={`d-flex flex-column align-items-center pt-5 pb-4 ${color}`}
+      className={`${color}`}
       data-aos="flip-left"
       data-aos-offset="200"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        paddingTop: "4.5vh",
+        paddingBottom: "4.5vh",
+      }}
     >
-      <h2 style={{ fontWeight: "bold" }} className="mb-4">
-        {props.title}
-      </h2>
+      <h2 style={{ fontWeight: "bold", marginBottom: "4vh" }}>{props.title}</h2>
       <img
         loading="lazy"
         src={props.img}
@@ -39,8 +45,6 @@ const ValueCard = (props: ValueCardProps) => {
           width: "60%",
           height: "auto",
           pointerEvents: "none",
-          minHeight: "65px",
-          minWidth: "65px",
         }}
       />
     </div>

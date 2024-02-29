@@ -1,11 +1,12 @@
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./index.css";
 
 import { useEffect, useLayoutEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 
-import Connections from "./components/Connections";
-import { LightBlueBox } from "./components/LightBlueBox";
+import Connections from "../../components/Connections";
+import { LightBlueBox } from "../../components/LightBlueBox";
 
 export default function Introduction() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -26,7 +27,15 @@ export default function Introduction() {
     <>
       <div
         id="introduction"
-        className="vstack gap-3 d-flex justify-content-center"
+        style={{
+          flex: "1 1 auto",
+          flexDirection: "column",
+          alignSelf: "stretch",
+          display: "flex",
+          justifyContent: "center",
+          marginTop: isMobile ? "3rem" : "0",
+          marginBottom: isMobile ? "3rem" : "0",
+        }}
       >
         {isMobile ? null : <LightBlueBox position="left" />}
         <IntroductionInfo isMobile={isMobile} />

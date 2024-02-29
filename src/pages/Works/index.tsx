@@ -1,8 +1,6 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import { useEffect, useState } from "react";
 
-import WorksContainer from "./components/WorksContainer";
+import WorksContainer from "../../components/WorksContainer";
 
 export default function Works() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
@@ -22,8 +20,10 @@ export default function Works() {
   return (
     <>
       <h1
-        className="section-title pt-5"
+        id="works"
+        className="section-title"
         style={{
+          paddingTop: "5vh",
           position: !isMobile ? "absolute" : "static",
           left: !isMobile ? "50%" : "auto",
           right: !isMobile ? "" : "auto",
@@ -34,9 +34,11 @@ export default function Works() {
         Works
       </h1>
       <div
-        className="vstack d-flex align-items-center"
         id="works"
         style={{
+          display: "flex",
+
+          alignItems: "center",
           height: !isMobile ? "100vh" : "",
           flexDirection: isMobile ? "column" : "row",
           justifyContent: !isMobile ? "center" : "flex-start",

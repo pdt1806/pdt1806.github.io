@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 import { useEffect, useState } from "react";
 
@@ -31,8 +31,10 @@ export default function WorksBox(props: BoxProps) {
 
   return (
     <div
-      className="d-flex justify-content-evenly align-items-center"
       style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         flexDirection: isMobile ? "column" : "row",
         width: "100%",
       }}
@@ -67,16 +69,21 @@ export default function WorksBox(props: BoxProps) {
         }}
       >
         {props.link !== "" ? (
-          <a href={props.link} target="_blank" className="anchor">
-            <p className="works-title mb-2">{props.title}</p>
+          <a
+            href={props.link}
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            <p className="works-title">{props.title}</p>
           </a>
         ) : (
-          <p className="works-title mb-2">{props.title}</p>
+          <p className="works-title">{props.title}</p>
         )}
         <p>{props.description}</p>
         <div
-          className="d-flex align-items-center"
           style={{
+            display: "flex",
+            alignItems: "center",
             marginTop: "20px",
             width: "min-content",
             marginLeft: isMobile ? "auto" : "0",

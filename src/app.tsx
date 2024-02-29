@@ -1,6 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./app.css";
 
 import { useEffect } from "react";
 
@@ -35,29 +36,21 @@ export default function App() {
     };
   }, []);
 
+  const listOfPages = [
+    <Introduction />,
+    <AboutMe />,
+    <Education />,
+    <Technologies />,
+    <Works />,
+    <MyValues />,
+    <ContactMe />,
+  ];
+
   return (
     <>
-      <section id="introduction" className="section">
-        <Introduction />
-      </section>
-      <section id="aboutme" className="section">
-        <AboutMe />
-      </section>
-      <section id="education" className="section">
-        <Education />
-      </section>
-      <section id="technologies" className="section">
-        <Technologies />
-      </section>
-      <section id="works" className="section">
-        <Works />
-      </section>
-      <section id="my-values" className="section">
-        <MyValues />
-      </section>
-      <section id="contactme" className="section">
-        <ContactMe />
-      </section>
+      {listOfPages.map((page) => (
+        <section>{page}</section>
+      ))}
     </>
   );
 }

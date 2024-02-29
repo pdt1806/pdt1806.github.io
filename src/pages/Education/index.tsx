@@ -1,7 +1,8 @@
 import "aos/dist/aos.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import { useEffect, useRef, useState } from "react";
-import SchoolBox from "./components/SchoolBox";
+import SchoolBox from "../../components/SchoolBox";
+import "./index.css";
 
 const Education: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1280);
@@ -51,7 +52,13 @@ const Education: React.FC = () => {
 
   return (
     <>
-      <div className="vstack gap-2" ref={outerDivRef}>
+      <div
+        id="education"
+        ref={outerDivRef}
+        style={{
+          gap: "2vh",
+        }}
+      >
         {!isMobile && (
           <img
             loading="lazy"
@@ -62,8 +69,8 @@ const Education: React.FC = () => {
           />
         )}
         <div
-          className="pt-5"
           style={{
+            paddingTop: "5vh",
             paddingLeft: isMobile ? "0" : "5rem",
           }}
         >

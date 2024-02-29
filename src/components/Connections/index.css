@@ -1,0 +1,15 @@
+.connections-icon-a {
+  margin: 0 1vw 0 1vw;
+  @media screen and (max-width: 720px) {
+    margin: 0 2vw 0 2vw !important;
+  }
+}
+
+.connections-icon {
+  width: 40px !important;
+  height: 40px !important;
+  @media screen and (max-width: 1440px) {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
